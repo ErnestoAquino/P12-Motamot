@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bd3-Yo-odp">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="X2f-DG-dXL">
+            <objects>
+                <tabBarController id="bd3-Yo-odp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N8p-tS-IY8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2jM-Gn-uaI" kind="relationship" relationship="viewControllers" id="qBS-aj-RjY"/>
+                        <segue destination="7JK-jF-3Nw" kind="relationship" relationship="viewControllers" id="mX9-Bg-xqh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdA-Fa-d7t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1581" y="687"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="ces-0Z-xE7">
+            <objects>
+                <navigationController id="2jM-Gn-uaI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="ed7-Pm-e0h">
+                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZP-W2-nEN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4PS-NH-gjz" kind="relationship" relationship="rootViewController" id="sbT-X1-u2M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Cf-mf-U3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-394" y="364"/>
+        </scene>
+        <!--Mot a mot-->
+        <scene sceneID="cEi-n4-rSe">
+            <objects>
+                <viewController id="4PS-NH-gjz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A6g-4V-Knz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dtk-8I-7n6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mot a mot" id="tZT-jb-if5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GbN-4Y-JZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="366"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="B26-zw-TBY">
+            <objects>
+                <navigationController id="7JK-jF-3Nw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" id="i0q-px-LsB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gSS-FP-tTi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <textAttributes key="titleTextAttributes">
+                                <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                            </textAttributes>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ciZ-K2-Vqf" kind="relationship" relationship="rootViewController" id="kqO-1H-c0K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eA5-NQ-HBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-419" y="1034"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="dXx-eT-4Xg">
+            <objects>
+                <viewController id="ciZ-K2-Vqf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2I-Tj-p14">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Va1-9h-yxq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="Vhw-Pq-Vr4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJY-6v-g8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="1034"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

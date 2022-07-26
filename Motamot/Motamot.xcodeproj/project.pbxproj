@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF728900CD600F92D80 /* AppDelegate.swift */; };
+		94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF928900CD600F92D80 /* SceneDelegate.swift */; };
+		94A37CFC28900CD600F92D80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CFB28900CD600F92D80 /* ViewController.swift */; };
+		94A37CFF28900CD600F92D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37CFD28900CD600F92D80 /* Main.storyboard */; };
+		94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */; };
+		94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0328900CD800F92D80 /* Assets.xcassets */; };
+		94A37D0728900CD800F92D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */; };
+		94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1128900CD800F92D80 /* MotamotTests.swift */; };
+		94A37D1C28900CD800F92D80 /* MotamotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1B28900CD800F92D80 /* MotamotUITests.swift */; };
+		94A37D1E28900CD800F92D80 /* MotamotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94A37D0E28900CD800F92D80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94A37CEC28900CD600F92D80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94A37CF328900CD600F92D80;
+			remoteInfo = Motamot;
+		};
+		94A37D1828900CD800F92D80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94A37CEC28900CD600F92D80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94A37CF328900CD600F92D80;
+			remoteInfo = Motamot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		94A37CF428900CD600F92D80 /* Motamot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motamot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A37CF728900CD600F92D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94A37CF928900CD600F92D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		94A37CFB28900CD600F92D80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94A37CFE28900CD600F92D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94A37D0128900CD600F92D80 /* Motamot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Motamot.xcdatamodel; sourceTree = "<group>"; };
+		94A37D0328900CD800F92D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94A37D0628900CD800F92D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94A37D0828900CD800F92D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94A37D0D28900CD800F92D80 /* MotamotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A37D1128900CD800F92D80 /* MotamotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotTests.swift; sourceTree = "<group>"; };
+		94A37D1728900CD800F92D80 /* MotamotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94A37D1B28900CD800F92D80 /* MotamotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITests.swift; sourceTree = "<group>"; };
+		94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94A37CF128900CD600F92D80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D0A28900CD800F92D80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D1428900CD800F92D80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94A37CEB28900CD600F92D80 = {
+			isa = PBXGroup;
+			children = (
+				94A37CF628900CD600F92D80 /* Motamot */,
+				94A37D1028900CD800F92D80 /* MotamotTests */,
+				94A37D1A28900CD800F92D80 /* MotamotUITests */,
+				94A37CF528900CD600F92D80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94A37CF528900CD600F92D80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94A37CF428900CD600F92D80 /* Motamot.app */,
+				94A37D0D28900CD800F92D80 /* MotamotTests.xctest */,
+				94A37D1728900CD800F92D80 /* MotamotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94A37CF628900CD600F92D80 /* Motamot */ = {
+			isa = PBXGroup;
+			children = (
+				94A37CF728900CD600F92D80 /* AppDelegate.swift */,
+				94A37CF928900CD600F92D80 /* SceneDelegate.swift */,
+				94A37CFB28900CD600F92D80 /* ViewController.swift */,
+				94A37CFD28900CD600F92D80 /* Main.storyboard */,
+				94A37D0328900CD800F92D80 /* Assets.xcassets */,
+				94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */,
+				94A37D0828900CD800F92D80 /* Info.plist */,
+				94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */,
+			);
+			path = Motamot;
+			sourceTree = "<group>";
+		};
+		94A37D1028900CD800F92D80 /* MotamotTests */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D1128900CD800F92D80 /* MotamotTests.swift */,
+			);
+			path = MotamotTests;
+			sourceTree = "<group>";
+		};
+		94A37D1A28900CD800F92D80 /* MotamotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D1B28900CD800F92D80 /* MotamotUITests.swift */,
+				94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */,
+			);
+			path = MotamotUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94A37CF328900CD600F92D80 /* Motamot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94A37D2128900CD800F92D80 /* Build configuration list for PBXNativeTarget "Motamot" */;
+			buildPhases = (
+				94A37CF028900CD600F92D80 /* Sources */,
+				94A37CF128900CD600F92D80 /* Frameworks */,
+				94A37CF228900CD600F92D80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Motamot;
+			productName = Motamot;
+			productReference = 94A37CF428900CD600F92D80 /* Motamot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		94A37D0C28900CD800F92D80 /* MotamotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94A37D2428900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotTests" */;
+			buildPhases = (
+				94A37D0928900CD800F92D80 /* Sources */,
+				94A37D0A28900CD800F92D80 /* Frameworks */,
+				94A37D0B28900CD800F92D80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94A37D0F28900CD800F92D80 /* PBXTargetDependency */,
+			);
+			name = MotamotTests;
+			productName = MotamotTests;
+			productReference = 94A37D0D28900CD800F92D80 /* MotamotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		94A37D1628900CD800F92D80 /* MotamotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94A37D2728900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotUITests" */;
+			buildPhases = (
+				94A37D1328900CD800F92D80 /* Sources */,
+				94A37D1428900CD800F92D80 /* Frameworks */,
+				94A37D1528900CD800F92D80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94A37D1928900CD800F92D80 /* PBXTargetDependency */,
+			);
+			name = MotamotUITests;
+			productName = MotamotUITests;
+			productReference = 94A37D1728900CD800F92D80 /* MotamotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94A37CEC28900CD600F92D80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					94A37CF328900CD600F92D80 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					94A37D0C28900CD800F92D80 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 94A37CF328900CD600F92D80;
+					};
+					94A37D1628900CD800F92D80 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 94A37CF328900CD600F92D80;
+					};
+				};
+			};
+			buildConfigurationList = 94A37CEF28900CD600F92D80 /* Build configuration list for PBXProject "Motamot" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94A37CEB28900CD600F92D80;
+			productRefGroup = 94A37CF528900CD600F92D80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94A37CF328900CD600F92D80 /* Motamot */,
+				94A37D0C28900CD800F92D80 /* MotamotTests */,
+				94A37D1628900CD800F92D80 /* MotamotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94A37CF228900CD600F92D80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A37D0728900CD800F92D80 /* LaunchScreen.storyboard in Resources */,
+				94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */,
+				94A37CFF28900CD600F92D80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D0B28900CD800F92D80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D1528900CD800F92D80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94A37CF028900CD600F92D80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A37CFC28900CD600F92D80 /* ViewController.swift in Sources */,
+				94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */,
+				94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */,
+				94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D0928900CD800F92D80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A37D1328900CD800F92D80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A37D1E28900CD800F92D80 /* MotamotUITestsLaunchTests.swift in Sources */,
+				94A37D1C28900CD800F92D80 /* MotamotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94A37D0F28900CD800F92D80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94A37CF328900CD600F92D80 /* Motamot */;
+			targetProxy = 94A37D0E28900CD800F92D80 /* PBXContainerItemProxy */;
+		};
+		94A37D1928900CD800F92D80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94A37CF328900CD600F92D80 /* Motamot */;
+			targetProxy = 94A37D1828900CD800F92D80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94A37CFD28900CD600F92D80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A37CFE28900CD600F92D80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A37D0628900CD800F92D80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94A37D1F28900CD800F92D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94A37D2028900CD800F92D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94A37D2228900CD800F92D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Motamot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.Motamot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94A37D2328900CD800F92D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Motamot/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.Motamot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		94A37D2528900CD800F92D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motamot.app/Motamot";
+			};
+			name = Debug;
+		};
+		94A37D2628900CD800F92D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Motamot.app/Motamot";
+			};
+			name = Release;
+		};
+		94A37D2828900CD800F92D80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Motamot;
+			};
+			name = Debug;
+		};
+		94A37D2928900CD800F92D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QD45F7JUWF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Motamot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94A37CEF28900CD600F92D80 /* Build configuration list for PBXProject "Motamot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A37D1F28900CD800F92D80 /* Debug */,
+				94A37D2028900CD800F92D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A37D2128900CD800F92D80 /* Build configuration list for PBXNativeTarget "Motamot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A37D2228900CD800F92D80 /* Debug */,
+				94A37D2328900CD800F92D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A37D2428900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A37D2528900CD800F92D80 /* Debug */,
+				94A37D2628900CD800F92D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94A37D2728900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94A37D2828900CD800F92D80 /* Debug */,
+				94A37D2928900CD800F92D80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94A37D0128900CD600F92D80 /* Motamot.xcdatamodel */,
+			);
+			currentVersion = 94A37D0128900CD600F92D80 /* Motamot.xcdatamodel */;
+			path = Motamot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 94A37CEC28900CD600F92D80 /* Project object */;
+}
