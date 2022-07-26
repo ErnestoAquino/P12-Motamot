@@ -9,6 +9,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="WigendaTypewrite.ttf">
+            <string>WigendaTypewrite</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="X2f-DG-dXL">
@@ -61,18 +66,66 @@
         <!--Mot a mot-->
         <scene sceneID="cEi-n4-rSe">
             <objects>
-                <viewController id="4PS-NH-gjz" sceneMemberID="viewController">
+                <viewController id="4PS-NH-gjz" customClass="SearchViewController" customModule="Motamot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6g-4V-Knz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yxt-Oc-3eT">
+                                <rect key="frame" x="40" y="144" width="334" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hello" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-ui-Jvp">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4o2-Vl-ZeD"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sMU-c1-GYg">
+                                <rect key="frame" x="60" y="577" width="294" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sng-vZ-cFc">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="bmG-ot-Blm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Serach">
+                                            <fontDescription key="titleFontDescription" name="WigendaTypewrite-Bold" family="WigendaTypewrite" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-V2-UoY">
+                                        <rect key="frame" x="0.0" y="40" width="294" height="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Da5-MR-ZG4"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dtk-8I-7n6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dtk-8I-7n6" firstAttribute="trailing" secondItem="sMU-c1-GYg" secondAttribute="trailing" constant="60" id="ElN-Ux-JsG"/>
+                            <constraint firstItem="Yxt-Oc-3eT" firstAttribute="top" secondItem="dtk-8I-7n6" secondAttribute="top" constant="100" id="Nlo-TK-ZTl"/>
+                            <constraint firstItem="Yxt-Oc-3eT" firstAttribute="leading" secondItem="dtk-8I-7n6" secondAttribute="leading" constant="40" id="T71-bU-0tf"/>
+                            <constraint firstItem="dtk-8I-7n6" firstAttribute="trailing" secondItem="Yxt-Oc-3eT" secondAttribute="trailing" constant="40" id="fzb-Nn-uUH"/>
+                            <constraint firstItem="dtk-8I-7n6" firstAttribute="bottom" secondItem="sMU-c1-GYg" secondAttribute="bottom" constant="40" id="hqL-Lj-qsV"/>
+                            <constraint firstItem="sMU-c1-GYg" firstAttribute="centerX" secondItem="A6g-4V-Knz" secondAttribute="centerX" id="pD9-W1-g4V"/>
+                            <constraint firstItem="sMU-c1-GYg" firstAttribute="leading" secondItem="dtk-8I-7n6" secondAttribute="leading" constant="60" id="zvD-9D-Qhd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mot a mot" id="tZT-jb-if5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbN-4Y-JZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="366"/>
+            <point key="canvasLocation" x="360.86956521739131" y="365.21739130434787"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="B26-zw-TBY">

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF728900CD600F92D80 /* AppDelegate.swift */; };
 		94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF928900CD600F92D80 /* SceneDelegate.swift */; };
-		94A37CFC28900CD600F92D80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CFB28900CD600F92D80 /* ViewController.swift */; };
 		94A37CFF28900CD600F92D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37CFD28900CD600F92D80 /* Main.storyboard */; };
 		94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */; };
 		94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0328900CD800F92D80 /* Assets.xcassets */; };
@@ -17,6 +16,11 @@
 		94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1128900CD800F92D80 /* MotamotTests.swift */; };
 		94A37D1C28900CD800F92D80 /* MotamotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1B28900CD800F92D80 /* MotamotUITests.swift */; };
 		94A37D1E28900CD800F92D80 /* MotamotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */; };
+		94A37D3728900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */; };
+		94A37D3828900EF100F92D80 /* WigendaTypewrite-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */; };
+		94A37D3928900EF100F92D80 /* WigendaTypewrite-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */; };
+		94A37D3A28900EF100F92D80 /* WigendaTypewrite.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3628900EF100F92D80 /* WigendaTypewrite.ttf */; };
+		94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D3F28901A4700F92D80 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +44,6 @@
 		94A37CF428900CD600F92D80 /* Motamot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motamot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A37CF728900CD600F92D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A37CF928900CD600F92D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94A37CFB28900CD600F92D80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94A37CFE28900CD600F92D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94A37D0128900CD600F92D80 /* Motamot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Motamot.xcdatamodel; sourceTree = "<group>"; };
 		94A37D0328900CD800F92D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		94A37D1728900CD800F92D80 /* MotamotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A37D1B28900CD800F92D80 /* MotamotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITests.swift; sourceTree = "<group>"; };
 		94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-SemiBold.ttf"; sourceTree = "<group>"; };
+		94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Heavy.ttf"; sourceTree = "<group>"; };
+		94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Bold.ttf"; sourceTree = "<group>"; };
+		94A37D3628900EF100F92D80 /* WigendaTypewrite.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WigendaTypewrite.ttf; sourceTree = "<group>"; };
+		94A37D3F28901A4700F92D80 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +109,12 @@
 		94A37CF628900CD600F92D80 /* Motamot */ = {
 			isa = PBXGroup;
 			children = (
+				94A37D3E289018F300F92D80 /* Model */,
+				94A37D3D289018E400F92D80 /* Controller */,
+				94A37D3C289018C300F92D80 /* View */,
+				94A37D3228900DD000F92D80 /* Fonts */,
 				94A37CF728900CD600F92D80 /* AppDelegate.swift */,
 				94A37CF928900CD600F92D80 /* SceneDelegate.swift */,
-				94A37CFB28900CD600F92D80 /* ViewController.swift */,
-				94A37CFD28900CD600F92D80 /* Main.storyboard */,
-				94A37D0328900CD800F92D80 /* Assets.xcassets */,
-				94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */,
 				94A37D0828900CD800F92D80 /* Info.plist */,
 				94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */,
 			);
@@ -128,6 +136,42 @@
 				94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */,
 			);
 			path = MotamotUITests;
+			sourceTree = "<group>";
+		};
+		94A37D3228900DD000F92D80 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */,
+				94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */,
+				94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */,
+				94A37D3628900EF100F92D80 /* WigendaTypewrite.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		94A37D3C289018C300F92D80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94A37CFD28900CD600F92D80 /* Main.storyboard */,
+				94A37D0328900CD800F92D80 /* Assets.xcassets */,
+				94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94A37D3D289018E400F92D80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D3F28901A4700F92D80 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94A37D3E289018F300F92D80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,8 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A37D0728900CD800F92D80 /* LaunchScreen.storyboard in Resources */,
+				94A37D3728900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf in Resources */,
 				94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */,
+				94A37D3A28900EF100F92D80 /* WigendaTypewrite.ttf in Resources */,
+				94A37D3928900EF100F92D80 /* WigendaTypewrite-Bold.ttf in Resources */,
 				94A37CFF28900CD600F92D80 /* Main.storyboard in Resources */,
+				94A37D3828900EF100F92D80 /* WigendaTypewrite-Heavy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A37CFC28900CD600F92D80 /* ViewController.swift in Sources */,
+				94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */,
 				94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */,
 				94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */,
 				94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */,
@@ -447,8 +495,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +508,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,8 +525,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,7 +538,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
