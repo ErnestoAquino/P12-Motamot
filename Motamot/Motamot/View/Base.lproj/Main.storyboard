@@ -98,6 +98,9 @@
                                             <fontDescription key="titleFontDescription" name="WigendaTypewrite-Bold" family="WigendaTypewrite" pointSize="18"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchButtonPressed" destination="4PS-NH-gjz" eventType="touchUpInside" id="kTW-du-aOf"/>
+                                        </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-V2-UoY">
                                         <rect key="frame" x="0.0" y="40" width="294" height="30"/>
@@ -122,6 +125,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mot a mot" id="tZT-jb-if5"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kHe-V2-UoY" id="eRW-LC-Tif"/>
+                        <outlet property="searchButton" destination="sng-vZ-cFc" id="qNg-2L-49w"/>
+                        <outlet property="wordTextField" destination="9kY-ui-Jvp" id="NBC-3r-gFD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GbN-4Y-JZw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
