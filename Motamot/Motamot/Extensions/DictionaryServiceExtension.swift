@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+extension DictionaryService: SearchDelegate {
+    /**
+     This function displays an alert to the user.
+     
+     - parameter message: String with the message to be displayed in the alert.
+     */
+    func warningMessage(_ message: String) {
+        viewDelegate?.warningMessage(message)
+    }
+}
