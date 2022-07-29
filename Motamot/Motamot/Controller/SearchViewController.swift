@@ -12,14 +12,23 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var wordTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
+    let dictionaryService = DictionaryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dictionaryService.viewDelegate = self
 
         searchButton.round()
+        activityIndicator.isHidden = true
+    }
+
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        wordTextField.resignFirstResponder()
     }
 
     @IBAction func searchButtonPressed() {
+        dictionaryService.getDefinition(word: wordTextField.text)
     }
     
 }
@@ -32,7 +41,7 @@ extension SearchViewController: SearchDelegate {
  - parameter message: String with the message to be display in the alert.
  */
     func warningMessage(_ message: String) {
-        let alert: UIAlertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let alert: UIAlertController = UIAlertController(title: "Hi!", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel)
         alert.addAction(action)
         present(alert, animated: true)

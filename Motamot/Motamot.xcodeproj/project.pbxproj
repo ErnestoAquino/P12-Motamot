@@ -21,6 +21,14 @@
 		94A37D3928900EF100F92D80 /* WigendaTypewrite-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */; };
 		94A37D3A28900EF100F92D80 /* WigendaTypewrite.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3628900EF100F92D80 /* WigendaTypewrite.ttf */; };
 		94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D3F28901A4700F92D80 /* SearchViewController.swift */; };
+		94A37D4228905CBC00F92D80 /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D4128905CBB00F92D80 /* DictionaryService.swift */; };
+		94A37D4528905D0500F92D80 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D4428905D0500F92D80 /* UIButtonExtension.swift */; };
+		94A37D4828905DEB00F92D80 /* SearchProtocolDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D4728905DEB00F92D80 /* SearchProtocolDelegate.swift */; };
+		94A37D4A289062E700F92D80 /* DictionaryServiceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D49289062E700F92D80 /* DictionaryServiceExtension.swift */; };
+		94A37D4D289145ED00F92D80 /* DictionaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D4C289145ED00F92D80 /* DictionaryResponse.swift */; };
+		94A37D4F2891508800F92D80 /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D4E2891508800F92D80 /* URLSessionExtension.swift */; };
+		94A37D512891528900F92D80 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D502891528900F92D80 /* NetworkManager.swift */; };
+		94A37D5428916DFF00F92D80 /* UrlType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D5328916DFF00F92D80 /* UrlType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +67,14 @@
 		94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Bold.ttf"; sourceTree = "<group>"; };
 		94A37D3628900EF100F92D80 /* WigendaTypewrite.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = WigendaTypewrite.ttf; sourceTree = "<group>"; };
 		94A37D3F28901A4700F92D80 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		94A37D4128905CBB00F92D80 /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
+		94A37D4428905D0500F92D80 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		94A37D4728905DEB00F92D80 /* SearchProtocolDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProtocolDelegate.swift; sourceTree = "<group>"; };
+		94A37D49289062E700F92D80 /* DictionaryServiceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryServiceExtension.swift; sourceTree = "<group>"; };
+		94A37D4C289145ED00F92D80 /* DictionaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryResponse.swift; sourceTree = "<group>"; };
+		94A37D4E2891508800F92D80 /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
+		94A37D502891528900F92D80 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		94A37D5328916DFF00F92D80 /* UrlType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +125,10 @@
 		94A37CF628900CD600F92D80 /* Motamot */ = {
 			isa = PBXGroup;
 			children = (
+				94A37D5228916DBA00F92D80 /* Enums */,
+				94A37D4B289145CB00F92D80 /* Structures */,
+				94A37D4628905DCE00F92D80 /* Protocols */,
+				94A37D4328905CD800F92D80 /* Extensions */,
 				94A37D3E289018F300F92D80 /* Model */,
 				94A37D3D289018E400F92D80 /* Controller */,
 				94A37D3C289018C300F92D80 /* View */,
@@ -170,8 +190,44 @@
 		94A37D3E289018F300F92D80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94A37D4128905CBB00F92D80 /* DictionaryService.swift */,
+				94A37D502891528900F92D80 /* NetworkManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		94A37D4328905CD800F92D80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D4428905D0500F92D80 /* UIButtonExtension.swift */,
+				94A37D49289062E700F92D80 /* DictionaryServiceExtension.swift */,
+				94A37D4E2891508800F92D80 /* URLSessionExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94A37D4628905DCE00F92D80 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D4728905DEB00F92D80 /* SearchProtocolDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		94A37D4B289145CB00F92D80 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D4C289145ED00F92D80 /* DictionaryResponse.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		94A37D5228916DBA00F92D80 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D5328916DFF00F92D80 /* UrlType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A37D4F2891508800F92D80 /* URLSessionExtension.swift in Sources */,
+				94A37D5428916DFF00F92D80 /* UrlType.swift in Sources */,
 				94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */,
 				94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */,
+				94A37D4228905CBC00F92D80 /* DictionaryService.swift in Sources */,
+				94A37D512891528900F92D80 /* NetworkManager.swift in Sources */,
 				94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */,
 				94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */,
+				94A37D4828905DEB00F92D80 /* SearchProtocolDelegate.swift in Sources */,
+				94A37D4A289062E700F92D80 /* DictionaryServiceExtension.swift in Sources */,
+				94A37D4D289145ED00F92D80 /* DictionaryResponse.swift in Sources */,
+				94A37D4528905D0500F92D80 /* UIButtonExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

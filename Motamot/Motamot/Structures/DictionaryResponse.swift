@@ -37,3 +37,7 @@ struct Definition: Decodable {
     var synonyms: [String]?
     var antonyms: [String]?
 }
+
+struct Word {
+    
+}
