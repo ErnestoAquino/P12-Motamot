@@ -38,6 +38,11 @@ struct Definition: Decodable {
     var antonyms: [String]?
 }
 
-struct Word {
-    
+struct LocalWord {
+    var word: String
+    var phonetic: String?
+    var audio: Data?
+    var origin: String?
+    var definition: String?
+    var urlAudio: String?
 }
