@@ -16,4 +16,13 @@ extension DictionaryService: SearchDelegate {
     func warningMessage(_ message: String) {
         viewDelegate?.warningMessage(message)
     }
+
+    /**
+     This button shows (or hides) the activity indicator.
+     
+     - parameter value: True to show. False to hide.
+     */
+    func showActivityIndicator(_ value: Bool) {
+        viewDelegate?.showActivityIndicator(value)
+    }
 }

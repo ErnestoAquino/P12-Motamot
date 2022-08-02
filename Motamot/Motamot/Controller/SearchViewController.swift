@@ -47,4 +47,14 @@ extension SearchViewController: SearchDelegate {
         present(alert, animated: true)
     }
 
+    /**
+     This button shows (or hides) the activity indicator.
+     
+     - parameter value: True to show. False to hide.
+     */
+    func showActivityIndicator(_ value: Bool) {
+        searchButton.isHidden = value
+        activityIndicator.isHidden = !value
+    }
+
 }
