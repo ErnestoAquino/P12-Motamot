@@ -16,6 +16,7 @@ struct DictionaryResponse: Decodable {
     var word: String?
     var phonetic: String?
     var phonetics: [Phonetic]?
+    var origin: String?
     var meanings: [Meaning]?
     var sourceUrls: [String]?
 }
@@ -39,7 +40,7 @@ struct Definition: Decodable {
 }
 
 struct LocalWord {
-    var word: String
+    var word: String?
     var phonetic: String?
     var audio: Data?
     var origin: String?
