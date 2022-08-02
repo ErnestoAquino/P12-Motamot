@@ -52,4 +52,35 @@ public final class NetworkManager<T: Decodable> {
         })
         task?.resumeWithRequest()
     }
+
+    public func getInformation(url: URL?, completionHandler: @escaping ([T]?, Error?) -> Void) {
+        guard let url = url else {
+            completionHandler(nil, nil)
+            return
+        }
+        task?.cancel()
+        task = session.dataTaskWithURL(url, completion: { data, response, error in
+            DispatchQueue.main.async {
+                guard error == nil else {
+                    completionHandler(nil, error)
+                    return
+                }
+                guard let data = data,
+                      let response = response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                    completionHandler(nil, nil)
+                    return
+                }
+                let decoderData = JSONDecoder()
+                decoderData.keyDecodingStrategy = .useDefaultKeys
+                decoderData.dateDecodingStrategy = .secondsSince1970
+                guard let informationObtained = try? decoderData.decode([T]?.self, from: data) else {
+                    completionHandler(nil, nil)
+                    return
+                }
+                completionHandler(informationObtained, error)
+            }
+        })
+        task?.resumeWithRequest()
+    }
 }
