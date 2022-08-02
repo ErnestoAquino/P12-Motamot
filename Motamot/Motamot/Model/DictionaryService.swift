@@ -10,6 +10,7 @@ import Foundation
 class DictionaryService {
     weak var viewDelegate: SearchDelegate?
     private let session: URLSessionProtocol
+     var myLocalWord: LocalWord?
 
     init(_ session: URLSessionProtocol = URLSession.shared) {
         self.session = session
@@ -23,11 +24,38 @@ class DictionaryService {
             return
         }
         let url = createURL(word, type: .urlForDefinition)
-        print(url as Any)
-        
+        let networkManager = NetworkManager<DictionaryResponse>(networkManagerSession: session)
+        showActivityIndicator(true)
+        networkManager.getInformation(url: url) { dictionaryResponse, error in
+            guard error == nil,
+                  let dictionaryResponse = dictionaryResponse else {
+                self.warningMessage("Sorry.\nWe can finds definitions for this word.")
+                self.showActivityIndicator(false)
+                return
+            }
+            self.createLocalWord(dictionaryResponse)
+            self.showActivityIndicator(false)
+        }
     }
 
 
+    /**
+     This function creates an optional URL.
+
+     If you want a URL to get a definition select
+     ```
+     createURL(word, type: .urlForDefinition)//The function will create the URL using the endpoind + String.
+     ```
+     If you want a URL for the audio select:
+     ```
+     createURL(url, type: .urlForAudio)//The function will create a url with the string passed in parameter.
+     ```
+
+     - parameter stringURL: String optional to create the URL
+     - parameter type:      Type of url you want to obtain.
+     
+     - returns: Optional URL of the desired type.
+     */
     private func createURL(_ stringURL: String?, type: UrlType) -> URL?{
         let endPoint = "https://api.dictionaryapi.dev/api/v2/entries/en/"
         guard let stringURL = stringURL else {return nil}
@@ -51,5 +79,30 @@ class DictionaryService {
      */
     private func trimmingAllSpaces(_ string: String) -> String {
         return string.components(separatedBy: .whitespacesAndNewlines).joined()
+    }
+
+    private func createLocalWord(_ responseDictionary: [DictionaryResponse]) {
+        let word = responseDictionary[0].word
+        let phonetic =  responseDictionary[0].phonetic
+        let audioURL = responseDictionary[0].phonetics?[0].audio
+        let origin = responseDictionary[0].origin
+        let definition = responseDictionary[0].meanings?[0].definitions?[0].definition
+
+        let localWord = LocalWord(word: word,
+                                  phonetic: phonetic,
+                                  audio: nil,
+                                  origin: origin,
+                                  definition: definition,
+                                  urlAudio: audioURL)
+        myLocalWord =  localWord
+        getAudio(myLocalWord?.urlAudio)
+    }
+
+    private func getAudio(_ stringWithUrl: String?) {
+        let networkManager = NetworkManager<DictionaryResponse>(networkManagerSession: session)
+        networkManager.getAudio(stringWithUrl) { data in
+            guard let data = data else {return}
+            self.myLocalWord?.audio = data
+        }
     }
 }
