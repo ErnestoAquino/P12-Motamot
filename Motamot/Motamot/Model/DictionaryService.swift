@@ -83,11 +83,14 @@ class DictionaryService {
 
     private func createLocalWord(_ responseDictionary: [DictionaryResponse]) {
         let word = responseDictionary[0].word
-        let phonetic =  responseDictionary[0].phonetic
+        var phonetic =  responseDictionary[0].phonetics?[0].text
         let audioURL = responseDictionary[0].phonetics?[0].audio
         let origin = responseDictionary[0].origin
         let definition = responseDictionary[0].meanings?[0].definitions?[0].definition
 
+        if phonetic == nil {
+            phonetic = responseDictionary[0].phonetics?[1].text
+        }
         let localWord = LocalWord(word: word,
                                   phonetic: phonetic,
                                   audio: nil,
@@ -103,6 +106,22 @@ class DictionaryService {
         networkManager.getAudio(stringWithUrl) { data in
             guard let data = data else {return}
             self.myLocalWord?.audio = data
+            self.printWord(self.myLocalWord)
         }
+    }
+
+//MARK: - Funciones de test
+
+    private func printWord(_ word: LocalWord?) {
+        let text =
+        """
+        Word: \(word?.word ?? "---")
+        Phonetic: \(word?.phonetic ?? "---")
+        Audio: \(word?.audio?.description ?? "---")
+        Origin: \(word?.origin ?? "---")
+        Definition: \(word?.definition ?? "---")
+        urlAudio:  \(word?.urlAudio ?? "---")
+        """
+        print(text)
     }
 }
