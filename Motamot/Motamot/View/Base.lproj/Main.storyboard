@@ -144,6 +144,83 @@
             </objects>
             <point key="canvasLocation" x="360.86956521739131" y="365.21739130434787"/>
         </scene>
+        <!--Word View Controller-->
+        <scene sceneID="pvq-gL-yt6">
+            <objects>
+                <viewController storyboardIdentifier="WordViewController" id="wlK-hb-NeH" customClass="WordViewController" customModule="Motamot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8R3-uw-KCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-6q-QgK">
+                                <rect key="frame" x="20" y="20" width="374" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="qbI-BW-Z4R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="byc-P2-5EQ">
+                                <rect key="frame" x="20" y="180" width="374" height="536"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="tQ6-RD-W1y">
+                                <rect key="frame" x="20" y="98" width="376.33333333333331" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-lI-r6Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AOo-8d-Pzd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-vW-iNa">
+                                        <rect key="frame" x="309.33333333333331" y="0.0" width="67" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Zt5-ZQ-Jby"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playPronunciationPressed:" destination="wlK-hb-NeH" eventType="touchUpInside" id="gAb-a2-W3A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z0L-2F-LyP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z0L-2F-LyP" firstAttribute="bottom" secondItem="byc-P2-5EQ" secondAttribute="bottom" constant="20" id="5eI-oG-VSv"/>
+                            <constraint firstItem="z0L-2F-LyP" firstAttribute="trailing" secondItem="Qw1-6q-QgK" secondAttribute="trailing" constant="20" id="7Gj-FS-GSd"/>
+                            <constraint firstItem="byc-P2-5EQ" firstAttribute="top" secondItem="Qw1-6q-QgK" secondAttribute="bottom" constant="90" id="HTn-q0-rDW"/>
+                            <constraint firstItem="Qw1-6q-QgK" firstAttribute="top" secondItem="z0L-2F-LyP" secondAttribute="top" constant="20" id="goB-zw-hh6"/>
+                            <constraint firstItem="z0L-2F-LyP" firstAttribute="trailing" secondItem="byc-P2-5EQ" secondAttribute="trailing" constant="20" id="gzZ-U2-SAr"/>
+                            <constraint firstItem="byc-P2-5EQ" firstAttribute="leading" secondItem="z0L-2F-LyP" secondAttribute="leading" constant="20" id="jWN-0L-lMI"/>
+                            <constraint firstItem="Qw1-6q-QgK" firstAttribute="leading" secondItem="z0L-2F-LyP" secondAttribute="leading" constant="20" id="tCD-Vg-94N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="definitionTextView" destination="byc-P2-5EQ" id="Tf3-X7-qA2"/>
+                        <outlet property="playPronunciationButton" destination="Q7z-vW-iNa" id="fOk-d0-AHp"/>
+                        <outlet property="pronunciationTextLabel" destination="4gw-lI-r6Q" id="gls-PY-xmC"/>
+                        <outlet property="wordTextLabel" destination="Qw1-6q-QgK" id="2jC-Kz-C7j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="paO-jt-NtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037.68115942029" y="363.58695652173918"/>
+        </scene>
         <!--Favorites-->
         <scene sceneID="B26-zw-TBY">
             <objects>
@@ -191,6 +268,9 @@
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

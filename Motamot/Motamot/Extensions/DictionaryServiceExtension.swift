@@ -25,4 +25,8 @@ extension DictionaryService: SearchDelegate {
     func showActivityIndicator(_ value: Bool) {
         viewDelegate?.showActivityIndicator(value)
     }
+
+    func goToWordViewController() {
+        viewDelegate?.goToWordViewController()
+    }
 }

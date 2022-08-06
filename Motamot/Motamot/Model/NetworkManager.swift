@@ -92,7 +92,7 @@ public final class NetworkManager<T: Decodable> {
             completionHandler(nil)
             return
         }
-       
+
         task?.cancel()
         task = session.dataTaskWithURL(url, completion: { data, response, error in
             DispatchQueue.main.async {
@@ -109,3 +109,4 @@ public final class NetworkManager<T: Decodable> {
         task?.resumeWithRequest()
     }
 }
+

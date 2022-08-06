@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94102251289A6BB100421C0E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94102250289A6BB100421C0E /* WordViewController.swift */; };
 		94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF728900CD600F92D80 /* AppDelegate.swift */; };
 		94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37CF928900CD600F92D80 /* SceneDelegate.swift */; };
 		94A37CFF28900CD600F92D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37CFD28900CD600F92D80 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94102250289A6BB100421C0E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		94A37CF428900CD600F92D80 /* Motamot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Motamot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A37CF728900CD600F92D80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A37CF928900CD600F92D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				94A37D3F28901A4700F92D80 /* SearchViewController.swift */,
+				94102250289A6BB100421C0E /* WordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				94A37D4F2891508800F92D80 /* URLSessionExtension.swift in Sources */,
 				94A37D5428916DFF00F92D80 /* UrlType.swift in Sources */,
 				94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */,
+				94102251289A6BB100421C0E /* WordViewController.swift in Sources */,
 				94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */,
 				94A37D4228905CBC00F92D80 /* DictionaryService.swift in Sources */,
 				94A37D512891528900F92D80 /* NetworkManager.swift in Sources */,
