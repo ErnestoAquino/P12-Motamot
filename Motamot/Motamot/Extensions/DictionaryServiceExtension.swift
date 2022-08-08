@@ -8,6 +8,7 @@
 import Foundation
 
 extension DictionaryService: SearchDelegate {
+
     /**
      This function displays an alert to the user.
      
@@ -25,8 +26,15 @@ extension DictionaryService: SearchDelegate {
     func showActivityIndicator(_ value: Bool) {
         viewDelegate?.showActivityIndicator(value)
     }
-
+//TODO: Este metodo sera eliminado probablemente.
     func goToWordViewController() {
         viewDelegate?.goToWordViewController()
+    }
+
+    /**
+     Reloads the row  of the table view.
+     */
+    func reloadTableView() {
+        viewDelegate?.reloadTableView()
     }
 }
