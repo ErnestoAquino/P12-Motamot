@@ -11,6 +11,8 @@ class DictionaryService {
     weak var viewDelegate: SearchDelegate?
     private let session: URLSessionProtocol
      var myLocalWord: LocalWord?
+    //Test sobre usar mejor une table en lugar de una sola variable:
+    var wordsSearched: [LocalWord] = []
 
     init(_ session: URLSessionProtocol = URLSession.shared) {
         self.session = session
@@ -81,22 +83,43 @@ class DictionaryService {
         return string.components(separatedBy: .whitespacesAndNewlines).joined()
     }
 
+  
+    /**
+     This function retrieves the API response and creates an instance of localWord.
+     
+     - parameter responseDictionary: Array of dictionaryResponse
+     */
     private func createLocalWord(_ responseDictionary: [DictionaryResponse]) {
-        let word = responseDictionary[0].word
-        var phonetic =  responseDictionary[0].phonetics?[0].text
-        let audioURL = responseDictionary[0].phonetics?[0].audio
-        let origin = responseDictionary[0].origin
-        let definition = responseDictionary[0].meanings?[0].definitions?[0].definition
-
-        if phonetic == nil {
-            phonetic = responseDictionary[0].phonetics?[1].text
+        var audioURL = ""
+        let word = responseDictionary[0].word ?? ""
+        let origin = responseDictionary[0].origin ?? ""
+        let phonetics: [String] = responseDictionary[0].phonetics?.compactMap({ phonetic in
+            phonetic.text
+        }) ?? []
+        let audios: [String] = responseDictionary[0].phonetics?.compactMap({ phonetic in
+            phonetic.audio
+        }) ?? []
+        let definitions: [String] =  responseDictionary[0].meanings?[0].definitions?.compactMap({ definition in
+            definition.definition
+        }) ?? []
+        let synonyms: [String] = responseDictionary[0].meanings?[0].synonyms ?? []
+        let antonyms: [String] = responseDictionary[0].meanings?[0].antonyms ?? []
+        let examples: [String] = responseDictionary[0].meanings?[0].definitions?.compactMap({ definition in
+            definition.example
+        }) ?? []
+        if let indexOfUrl = audios.firstIndex(where: {$0.hasPrefix("https")}) {
+            audioURL = audios[indexOfUrl]
         }
-        let localWord = LocalWord(word: word,
-                                  phonetic: phonetic,
-                                  audio: nil,
-                                  origin: origin,
-                                  definition: definition,
-                                  urlAudio: audioURL)
+
+        let localWord = LocalWord (word: word,
+                                   phonetic: phonetics.joined(separator: " | "),
+                                   audio: nil,
+                                   origin: origin,
+                                   definition: definitions.joined(separator: "\n\t• "),
+                                   urlAudio: audioURL,
+                                   synonyms: synonyms.joined(separator: "\n\t• "),
+                                   antonyms: antonyms.joined(separator: "\n\t• "),
+                                   examples: examples.joined(separator: "\n\t• "))
         myLocalWord =  localWord
         getAudio(myLocalWord?.urlAudio)
     }
@@ -104,9 +127,22 @@ class DictionaryService {
     private func getAudio(_ stringWithUrl: String?) {
         let networkManager = NetworkManager<DictionaryResponse>(networkManagerSession: session)
         networkManager.getAudio(stringWithUrl) { data in
-            guard let data = data else {return}
+            guard let data = data else {
+                if let myLocalWord = self.myLocalWord {
+                    self.wordsSearched.append(myLocalWord)
+                }
+                self.printWord(self.myLocalWord)
+                print(self.wordsSearched.count)
+                self.goToWordViewController()
+                return
+            }
             self.myLocalWord?.audio = data
+            if let myLocalWord = self.myLocalWord {
+                self.wordsSearched.append(myLocalWord)
+            }
             self.printWord(self.myLocalWord)
+            print(self.wordsSearched.count)
+            self.goToWordViewController()
         }
     }
 
@@ -115,12 +151,15 @@ class DictionaryService {
     private func printWord(_ word: LocalWord?) {
         let text =
         """
-        Word: \(word?.word ?? "---")
-        Phonetic: \(word?.phonetic ?? "---")
-        Audio: \(word?.audio?.description ?? "---")
-        Origin: \(word?.origin ?? "---")
-        Definition: \(word?.definition ?? "---")
-        urlAudio:  \(word?.urlAudio ?? "---")
+        Word: \n\(word?.word ?? "---")
+        Origin: \n\(word?.origin ?? "---")
+        Phonetic: \n\(word?.phonetic ?? "---")
+        Definition: \n\(word?.definition ?? "---")
+        Examples: \n\(word?.examples ?? "---")
+        Synonyms: \n\(word?.synonyms ?? "---")
+        Antonyms: \n\(word?.antonyms ?? "---")
+        Audio: \n\(word?.audio?.description ?? "---")
+        urlAudio:  \n\(word?.urlAudio ?? "---")
         """
         print(text)
     }
