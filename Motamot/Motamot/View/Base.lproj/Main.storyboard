@@ -10,6 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="WigendaTypewrite-Heavy.ttf">
+            <string>WigendaTypewrite-Heavy</string>
+        </array>
+        <array key="WigendaTypewrite-SemiBold.ttf">
+            <string>WigendaTypewrite-SemiBold</string>
+        </array>
         <array key="WigendaTypewrite.ttf">
             <string>WigendaTypewrite</string>
         </array>
@@ -72,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yxt-Oc-3eT">
-                                <rect key="frame" x="40" y="144" width="334" height="40"/>
+                                <rect key="frame" x="40" y="64" width="334" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hello" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-ui-Jvp">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
@@ -111,17 +117,78 @@
                                     </activityIndicatorView>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-rL-bA9">
+                                <rect key="frame" x="20" y="114" width="374" height="453"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="150" id="cDF-I4-fcu" customClass="WordTableViewCell" customModule="Motamot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDF-I4-fcu" id="Xu2-pa-IzO">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Ea5-Cm-bvj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288.66666666666669" height="150"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" name="WigendaTypewrite-SemiBold" family="WigendaTypewrite" pointSize="12"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGT-Sk-WAM">
+                                                    <rect key="frame" x="308.66666666666669" y="11.000000000000002" width="45.333333333333314" height="30.666666666666671"/>
+                                                    <color key="tintColor" red="0.60000008339999999" green="0.60000008339999999" blue="0.60000008339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="playButtonPressed:" destination="cDF-I4-fcu" eventType="touchUpInside" id="nzI-fN-PSe"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZt-2k-XGI">
+                                                    <rect key="frame" x="293.66666666666669" y="42.666666666666664" width="75.333333333333314" height="11.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="dZt-2k-XGI" secondAttribute="trailing" constant="5" id="08g-Cw-W2y"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ea5-Cm-bvj" secondAttribute="bottom" id="TFw-MS-LSe"/>
+                                                <constraint firstItem="dZt-2k-XGI" firstAttribute="top" secondItem="WGT-Sk-WAM" secondAttribute="bottom" constant="1" id="mwR-IW-CaF"/>
+                                                <constraint firstItem="dZt-2k-XGI" firstAttribute="leading" secondItem="Ea5-Cm-bvj" secondAttribute="trailing" constant="5" id="nmC-WP-Uhq"/>
+                                                <constraint firstItem="Ea5-Cm-bvj" firstAttribute="leading" secondItem="Xu2-pa-IzO" secondAttribute="leading" id="okH-B6-AVn"/>
+                                                <constraint firstItem="WGT-Sk-WAM" firstAttribute="trailing" secondItem="Xu2-pa-IzO" secondAttribute="trailingMargin" id="ubP-ja-ehe"/>
+                                                <constraint firstItem="WGT-Sk-WAM" firstAttribute="top" secondItem="Xu2-pa-IzO" secondAttribute="topMargin" id="wt2-Lr-KvN"/>
+                                                <constraint firstItem="WGT-Sk-WAM" firstAttribute="leading" secondItem="Ea5-Cm-bvj" secondAttribute="trailing" constant="20" id="xOS-qA-tq9"/>
+                                                <constraint firstItem="Ea5-Cm-bvj" firstAttribute="top" secondItem="Xu2-pa-IzO" secondAttribute="top" id="yB5-0L-Ejz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="definitionTextView" destination="Ea5-Cm-bvj" id="BHv-I8-WEy"/>
+                                            <outlet property="playButton" destination="WGT-Sk-WAM" id="mhY-om-n3T"/>
+                                            <outlet property="pronuciationLabel" destination="dZt-2k-XGI" id="dA2-lx-Akp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dtk-8I-7n6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dtk-8I-7n6" firstAttribute="trailing" secondItem="sMU-c1-GYg" secondAttribute="trailing" constant="60" id="ElN-Ux-JsG"/>
-                            <constraint firstItem="Yxt-Oc-3eT" firstAttribute="top" secondItem="dtk-8I-7n6" secondAttribute="top" constant="100" id="Nlo-TK-ZTl"/>
+                            <constraint firstItem="NZs-rL-bA9" firstAttribute="top" secondItem="Yxt-Oc-3eT" secondAttribute="bottom" constant="10" id="JFk-v2-YBX"/>
+                            <constraint firstItem="Yxt-Oc-3eT" firstAttribute="top" secondItem="dtk-8I-7n6" secondAttribute="top" constant="20" id="Nlo-TK-ZTl"/>
                             <constraint firstItem="Yxt-Oc-3eT" firstAttribute="leading" secondItem="dtk-8I-7n6" secondAttribute="leading" constant="40" id="T71-bU-0tf"/>
+                            <constraint firstItem="sMU-c1-GYg" firstAttribute="top" secondItem="NZs-rL-bA9" secondAttribute="bottom" constant="10" id="XLN-6E-vgr"/>
+                            <constraint firstItem="dtk-8I-7n6" firstAttribute="trailing" secondItem="NZs-rL-bA9" secondAttribute="trailing" constant="20" id="XZr-to-Is7"/>
                             <constraint firstItem="dtk-8I-7n6" firstAttribute="trailing" secondItem="Yxt-Oc-3eT" secondAttribute="trailing" constant="40" id="fzb-Nn-uUH"/>
                             <constraint firstItem="dtk-8I-7n6" firstAttribute="bottom" secondItem="sMU-c1-GYg" secondAttribute="bottom" constant="40" id="hqL-Lj-qsV"/>
                             <constraint firstItem="sMU-c1-GYg" firstAttribute="centerX" secondItem="A6g-4V-Knz" secondAttribute="centerX" id="pD9-W1-g4V"/>
+                            <constraint firstItem="NZs-rL-bA9" firstAttribute="leading" secondItem="dtk-8I-7n6" secondAttribute="leading" constant="20" id="ue8-22-34J"/>
                             <constraint firstItem="sMU-c1-GYg" firstAttribute="leading" secondItem="dtk-8I-7n6" secondAttribute="leading" constant="60" id="zvD-9D-Qhd"/>
                         </constraints>
                         <connections>
@@ -132,6 +199,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="kHe-V2-UoY" id="eRW-LC-Tif"/>
                         <outlet property="searchButton" destination="sng-vZ-cFc" id="qNg-2L-49w"/>
+                        <outlet property="tableView" destination="NZs-rL-bA9" id="Rg4-t8-sgQ"/>
                         <outlet property="wordTextField" destination="9kY-ui-Jvp" id="NBC-3r-gFD"/>
                     </connections>
                 </viewController>
@@ -157,7 +225,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="qbI-BW-Z4R"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="WigendaTypewrite-Heavy" family="WigendaTypewrite" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -166,7 +234,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="tQ6-RD-W1y">
@@ -268,6 +336,7 @@
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
