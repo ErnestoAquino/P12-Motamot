@@ -37,13 +37,17 @@ struct Definition: Decodable {
     var definition: String?
     var synonyms: [String]?
     var antonyms: [String]?
+    var example: String?
 }
 
 struct LocalWord {
-    var word: String?
-    var phonetic: String?
+    var word: String
+    var phonetic: String
     var audio: Data?
-    var origin: String?
-    var definition: String?
+    var origin: String
+    var definition: String
     var urlAudio: String?
+    var synonyms: String
+    var antonyms: String
+    var examples: String
 }
