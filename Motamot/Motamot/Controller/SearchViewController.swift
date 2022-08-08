@@ -12,7 +12,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var wordTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-
+    @IBOutlet weak var tableView: UITableView!
+    static var cellidentifier = "WordCell"
+    
     let dictionaryService = DictionaryService()
     
     override func viewDidLoad() {
@@ -30,47 +32,4 @@ class SearchViewController: UIViewController {
     @IBAction func searchButtonPressed() {
         dictionaryService.getDefinition(word: wordTextField.text)
     }
-    
-}
-
-//MARK: -Extension
-extension SearchViewController: SearchDelegate {
-    /**
- This function displays an alert to user.
- 
- - parameter message: String with the message to be display in the alert.
- */
-    func warningMessage(_ message: String) {
-        let alert: UIAlertController = UIAlertController(title: "Hi!", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel)
-        alert.addAction(action)
-        present(alert, animated: true)
-    }
-
-    /**
-     This button shows (or hides) the activity indicator.
-     
-     - parameter value: True to show. False to hide.
-     */
-    func showActivityIndicator(_ value: Bool) {
-        searchButton.isHidden = value
-        activityIndicator.isHidden = !value
-    }
-
-    func goToWordViewController() {
-        if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "WordViewController") as? WordViewController {
-            let word = dictionaryService.myLocalWord
-            destinationVC.localWord = word
-            self.navigationController?.pushViewController(destinationVC, animated: true)
-        }
-    }
-
-//    func goToSearchResultViewController(recipes: [LocalRecipe], nextURL: String?) {
-//        if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "SearchResultViewController") as? SearchResultViewController {
-//            let  recipeService = RecipeService(recipes: recipeService.listRecipes, nextRexipes: recipeService.nextRecipes)
-//            destinationVC.recipeService = recipeService
-//            self.navigationController?.pushViewController(destinationVC, animated: true)
-//        }
-//    }
-
 }
