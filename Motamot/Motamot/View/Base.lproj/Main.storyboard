@@ -237,30 +237,30 @@
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="tQ6-RD-W1y">
-                                <rect key="frame" x="20" y="98" width="376.33333333333331" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="tQ6-RD-W1y">
+                                <rect key="frame" x="20" y="100" width="374" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-lI-r6Q">
-                                        <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AOo-8d-Pzd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-vW-iNa">
-                                        <rect key="frame" x="309.33333333333331" y="0.0" width="67" height="50"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnO-mL-eMz">
+                                        <rect key="frame" x="308.66666666666669" y="0.0" width="65.333333333333314" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="Zt5-ZQ-Jby"/>
+                                            <constraint firstAttribute="height" constant="50" id="5ov-YL-hKw"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button">
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=" " buttonSize="large">
+                                            <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="playPronunciationPressed:" destination="wlK-hb-NeH" eventType="touchUpInside" id="gAb-a2-W3A"/>
+                                            <action selector="playPronunciationPressed:" destination="wlK-hb-NeH" eventType="touchUpInside" id="yMB-Rv-sSv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -272,15 +272,19 @@
                             <constraint firstItem="z0L-2F-LyP" firstAttribute="bottom" secondItem="byc-P2-5EQ" secondAttribute="bottom" constant="20" id="5eI-oG-VSv"/>
                             <constraint firstItem="z0L-2F-LyP" firstAttribute="trailing" secondItem="Qw1-6q-QgK" secondAttribute="trailing" constant="20" id="7Gj-FS-GSd"/>
                             <constraint firstItem="byc-P2-5EQ" firstAttribute="top" secondItem="Qw1-6q-QgK" secondAttribute="bottom" constant="90" id="HTn-q0-rDW"/>
+                            <constraint firstItem="tQ6-RD-W1y" firstAttribute="top" secondItem="Qw1-6q-QgK" secondAttribute="bottom" constant="10" id="Q25-UQ-pPd"/>
+                            <constraint firstItem="z0L-2F-LyP" firstAttribute="trailing" secondItem="tQ6-RD-W1y" secondAttribute="trailing" constant="20" id="eiL-vg-7dg"/>
+                            <constraint firstItem="tQ6-RD-W1y" firstAttribute="leading" secondItem="z0L-2F-LyP" secondAttribute="leading" constant="20" id="fOw-9I-Gmr"/>
                             <constraint firstItem="Qw1-6q-QgK" firstAttribute="top" secondItem="z0L-2F-LyP" secondAttribute="top" constant="20" id="goB-zw-hh6"/>
                             <constraint firstItem="z0L-2F-LyP" firstAttribute="trailing" secondItem="byc-P2-5EQ" secondAttribute="trailing" constant="20" id="gzZ-U2-SAr"/>
                             <constraint firstItem="byc-P2-5EQ" firstAttribute="leading" secondItem="z0L-2F-LyP" secondAttribute="leading" constant="20" id="jWN-0L-lMI"/>
                             <constraint firstItem="Qw1-6q-QgK" firstAttribute="leading" secondItem="z0L-2F-LyP" secondAttribute="leading" constant="20" id="tCD-Vg-94N"/>
+                            <constraint firstItem="byc-P2-5EQ" firstAttribute="top" secondItem="tQ6-RD-W1y" secondAttribute="bottom" constant="20" id="z42-x2-Knf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="definitionTextView" destination="byc-P2-5EQ" id="Tf3-X7-qA2"/>
-                        <outlet property="playPronunciationButton" destination="Q7z-vW-iNa" id="fOk-d0-AHp"/>
+                        <outlet property="playPronunciationButton" destination="RnO-mL-eMz" id="dZU-Uz-4j1"/>
                         <outlet property="pronunciationTextLabel" destination="4gw-lI-r6Q" id="gls-PY-xmC"/>
                         <outlet property="wordTextLabel" destination="Qw1-6q-QgK" id="2jC-Kz-C7j"/>
                     </connections>
