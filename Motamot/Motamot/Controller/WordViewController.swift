@@ -14,7 +14,8 @@ class WordViewController: UIViewController {
     @IBOutlet weak var pronunciationTextLabel: UILabel!
     @IBOutlet weak var playPronunciationButton: UIButton!
     @IBOutlet weak var definitionTextView: UITextView!
-
+    @IBOutlet weak var saveWordButton: UIBarButtonItem!
+    
     var localWord: LocalWord?
     var player: AVAudioPlayer?
 
@@ -26,7 +27,12 @@ class WordViewController: UIViewController {
     @IBAction func playPronunciationPressed(_ sender: UIButton) {
         playPronunciation()
     }
-
+  
+    @IBAction func saveWordButtonPressed(_ sender: UIBarButtonItem) {
+        //TODO: Save and delete word.
+    }
+    
+    
     private func configureView() {
         wordTextLabel.text = localWord?.word.uppercased()
         if localWord?.audio == nil {

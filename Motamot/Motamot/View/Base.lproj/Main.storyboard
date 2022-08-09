@@ -50,6 +50,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZP-W2-nEN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBarAppearance key="standardAppearance">
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
@@ -229,7 +230,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="byc-P2-5EQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="byc-P2-5EQ">
                                 <rect key="frame" x="20" y="180" width="374" height="536"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -282,16 +283,26 @@
                             <constraint firstItem="byc-P2-5EQ" firstAttribute="top" secondItem="tQ6-RD-W1y" secondAttribute="bottom" constant="20" id="z42-x2-Knf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SR4-m1-Bja">
+                        <barButtonItem key="rightBarButtonItem" id="Dpp-TY-GeU">
+                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="saveWordButtonPressed:" destination="wlK-hb-NeH" id="Y2L-Du-8wb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="definitionTextView" destination="byc-P2-5EQ" id="Tf3-X7-qA2"/>
                         <outlet property="playPronunciationButton" destination="RnO-mL-eMz" id="dZU-Uz-4j1"/>
                         <outlet property="pronunciationTextLabel" destination="4gw-lI-r6Q" id="gls-PY-xmC"/>
+                        <outlet property="saveWordButton" destination="Dpp-TY-GeU" id="Tyc-BB-7hc"/>
                         <outlet property="wordTextLabel" destination="Qw1-6q-QgK" id="2jC-Kz-C7j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paO-jt-NtE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037.68115942029" y="363.58695652173918"/>
+            <point key="canvasLocation" x="1196" y="364"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="B26-zw-TBY">
