@@ -19,10 +19,6 @@ class WordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
-        pronunciationTextLabel.isEnabled = true
-        playPronunciationButton.isEnabled = true
-        pronunciationTextLabel.isHidden = false
-        playPronunciationButton.isHidden = false
     }
 
     @IBAction func playPronunciationPressed(_ sender: UIButton) {
@@ -31,6 +27,7 @@ class WordViewController: UIViewController {
 
     private func configureView() {
         wordTextLabel.text = localWord?.word.uppercased()
+        
 //        if localWord?.audio == nil {
 //            pronunciationTextLabel.isHidden = true
 //            playPronunciationButton.isHidden = true
