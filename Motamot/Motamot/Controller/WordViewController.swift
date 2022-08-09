@@ -22,7 +22,7 @@ class WordViewController: UIViewController {
         super.viewDidLoad()
         configureView()
     }
-    
+
     @IBAction func playPronunciationPressed(_ sender: UIButton) {
         playPronunciation()
     }
@@ -49,11 +49,9 @@ class WordViewController: UIViewController {
 
     private func playPronunciation() {
         if let player = player, player.isPlaying {
-            //Stop playing
             playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
             player.stop()
         } else {
-            // set up and play
             playPronunciationButton.setImage(UIImage(systemName: "stop.circle"), for: .normal)
             do {
                 try AVAudioSession.sharedInstance().setMode(.default)
