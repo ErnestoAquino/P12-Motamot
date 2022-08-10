@@ -15,9 +15,10 @@ class WordViewController: UIViewController {
     @IBOutlet weak var playPronunciationButton: UIButton!
     @IBOutlet weak var definitionTextView: UITextView!
     @IBOutlet weak var saveWordButton: UIBarButtonItem!
-    
-    var localWord: LocalWord?
+
+    private var localDictionaryService = LocalDictionaryService()
     var player: AVAudioPlayer?
+    var localWord: LocalWord?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,7 @@ class WordViewController: UIViewController {
     @IBAction func saveWordButtonPressed(_ sender: UIBarButtonItem) {
         saveWord()
     }
-    
-    
+
     private func configureView() {
         saveWordButton.image = UIImage(systemName: "suit.heart")
         wordTextLabel.text = localWord?.word.uppercased()
@@ -78,9 +78,13 @@ class WordViewController: UIViewController {
         if saveWordButton.image == UIImage(systemName: "suit.heart") {
             //TODO: - Save word
             saveWordButton.image = UIImage(systemName: "heart.fill")
+            localDictionaryService.saveWord(localWord)
         } else {
             //TODO: - Delete word.
             saveWordButton.image = UIImage(systemName: "suit.heart")
+            if let wordToDelete =  localWord?.word {
+                localDictionaryService.deleteWord(wordToDelete)
+            }
         }
     }
 }
