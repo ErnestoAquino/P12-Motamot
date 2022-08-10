@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dictionaryService.viewDelegate = self
+        self.wordTextField.delegate = self
 
         searchButton.round()
         activityIndicator.isHidden = true
