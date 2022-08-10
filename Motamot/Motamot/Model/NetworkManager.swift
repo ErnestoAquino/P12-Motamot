@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 public final class NetworkManager<T: Decodable> {
 
     private var task: URLSessionDataTaskProtocol?
