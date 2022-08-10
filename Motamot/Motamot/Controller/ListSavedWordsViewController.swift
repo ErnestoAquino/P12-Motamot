@@ -9,21 +9,34 @@ import UIKit
 
 class ListSavedWordsViewController: UIViewController {
 
+    @IBOutlet weak var noWordsView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    static var cellIdentifier = "WordCell"
+    let localDictionaryService = LocalDictionaryService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        localDictionaryService.fetchWords()
+        checkIfDisplayMessage()
+        tableView.dataSource = self
+        print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        localDictionaryService.fetchWords()
+        checkIfDisplayMessage()
+        print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
     }
-    */
 
+    private func checkIfDisplayMessage() {
+        if localDictionaryService.favoriteWords.isEmpty {
+            noWordsView.isHidden = false
+//            tableView.backgroundView = noWordsView
+            // TODO: Display message.
+        } else {
+            // TODO: Do not display message
+            noWordsView.isHidden = true
+        }
+    }
 }
