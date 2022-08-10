@@ -29,11 +29,12 @@ class WordViewController: UIViewController {
     }
   
     @IBAction func saveWordButtonPressed(_ sender: UIBarButtonItem) {
-        //TODO: Save and delete word.
+        saveWord()
     }
     
     
     private func configureView() {
+        saveWordButton.image = UIImage(systemName: "suit.heart")
         wordTextLabel.text = localWord?.word.uppercased()
         if localWord?.audio == nil {
             pronunciationTextLabel.isHidden = true
@@ -70,6 +71,16 @@ class WordViewController: UIViewController {
             } catch  {
                 print("Something went wrong")
             }
+        }
+    }
+
+    private func saveWord() {
+        if saveWordButton.image == UIImage(systemName: "suit.heart") {
+            //TODO: - Save word
+            saveWordButton.image = UIImage(systemName: "heart.fill")
+        } else {
+            //TODO: - Delete word.
+            saveWordButton.image = UIImage(systemName: "suit.heart")
         }
     }
 }

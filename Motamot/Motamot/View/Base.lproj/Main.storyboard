@@ -285,7 +285,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SR4-m1-Bja">
                         <barButtonItem key="rightBarButtonItem" id="Dpp-TY-GeU">
-                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                            <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="saveWordButtonPressed:" destination="wlK-hb-NeH" id="Y2L-Du-8wb"/>
@@ -352,6 +352,7 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
