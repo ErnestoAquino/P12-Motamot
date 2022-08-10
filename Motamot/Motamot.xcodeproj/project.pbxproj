@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		94102251289A6BB100421C0E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94102250289A6BB100421C0E /* WordViewController.swift */; };
+		9474241928A39F6A0056709B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241828A39F6A0056709B /* CoreDataStack.swift */; };
+		9474241B28A3A7B90056709B /* FavoriteWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241A28A3A7B90056709B /* FavoriteWord.swift */; };
+		9474241D28A3AB3C0056709B /* LocalDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */; };
 		94743B75289E9C2E00283548 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94743B74289E9C2E00283548 /* WordTableViewCell.swift */; };
 		94743B77289EC15D00283548 /* SearchViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94743B76289EC15D00283548 /* SearchViewControllerExtension.swift */; };
 		947A764628A298C30049FE4D /* WordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A764528A298C30049FE4D /* WordViewControllerExtension.swift */; };
@@ -54,6 +57,9 @@
 
 /* Begin PBXFileReference section */
 		94102250289A6BB100421C0E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		9474241828A39F6A0056709B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9474241A28A3A7B90056709B /* FavoriteWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWord.swift; sourceTree = "<group>"; };
+		9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryService.swift; sourceTree = "<group>"; };
 		94743B74289E9C2E00283548 /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		94743B76289EC15D00283548 /* SearchViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtension.swift; sourceTree = "<group>"; };
 		947A764528A298C30049FE4D /* WordViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -110,6 +116,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9474241728A39F4F0056709B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */,
+				9474241828A39F6A0056709B /* CoreDataStack.swift */,
+				9474241A28A3A7B90056709B /* FavoriteWord.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		94A37CEB28900CD600F92D80 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +160,6 @@
 				94A37CF728900CD600F92D80 /* AppDelegate.swift */,
 				94A37CF928900CD600F92D80 /* SceneDelegate.swift */,
 				94A37D0828900CD800F92D80 /* Info.plist */,
-				94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */,
 			);
 			path = Motamot;
 			sourceTree = "<group>";
@@ -200,8 +215,10 @@
 		94A37D3E289018F300F92D80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				94A37D4128905CBB00F92D80 /* DictionaryService.swift */,
+				9474241728A39F4F0056709B /* CoreData */,
 				94A37D502891528900F92D80 /* NetworkManager.swift */,
+				94A37D4128905CBB00F92D80 /* DictionaryService.swift */,
+				9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -389,10 +406,13 @@
 				94A37CFA28900CD600F92D80 /* SceneDelegate.swift in Sources */,
 				94A37D4828905DEB00F92D80 /* SearchProtocolDelegate.swift in Sources */,
 				94A37D4A289062E700F92D80 /* DictionaryServiceExtension.swift in Sources */,
+				9474241928A39F6A0056709B /* CoreDataStack.swift in Sources */,
 				947A764628A298C30049FE4D /* WordViewControllerExtension.swift in Sources */,
 				94743B75289E9C2E00283548 /* WordTableViewCell.swift in Sources */,
 				94A37D4D289145ED00F92D80 /* DictionaryResponse.swift in Sources */,
+				9474241D28A3AB3C0056709B /* LocalDictionaryService.swift in Sources */,
 				94A37D4528905D0500F92D80 /* UIButtonExtension.swift in Sources */,
+				9474241B28A3A7B90056709B /* FavoriteWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
