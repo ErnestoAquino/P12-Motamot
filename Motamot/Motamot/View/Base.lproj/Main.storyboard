@@ -70,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="-394" y="364"/>
         </scene>
-        <!--Mot a mot-->
+        <!--Mot à mot-->
         <scene sceneID="cEi-n4-rSe">
             <objects>
                 <viewController id="4PS-NH-gjz" customClass="SearchViewController" customModule="Motamot" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,10 +81,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yxt-Oc-3eT">
                                 <rect key="frame" x="40" y="64" width="334" height="40"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hello" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-ui-Jvp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hello" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-ui-Jvp">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
                                         <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -122,7 +122,7 @@
                                 <rect key="frame" x="20" y="114" width="374" height="453"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="150" id="cDF-I4-fcu" customClass="WordTableViewCell" customModule="Motamot" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCelling" rowHeight="150" id="cDF-I4-fcu" customClass="WordTableViewCell" customModule="Motamot" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDF-I4-fcu" id="Xu2-pa-IzO">
@@ -196,7 +196,7 @@
                             <outletCollection property="gestureRecognizers" destination="dZX-F6-ySy" appends="YES" id="Bjo-0x-3O8"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Mot a mot" id="tZT-jb-if5"/>
+                    <navigationItem key="navigationItem" title="Mot à mot" id="tZT-jb-if5"/>
                     <connections>
                         <outlet property="activityIndicator" destination="kHe-V2-UoY" id="eRW-LC-Tif"/>
                         <outlet property="searchButton" destination="sng-vZ-cFc" id="qNg-2L-49w"/>
@@ -334,18 +334,81 @@
         <!--Favorites-->
         <scene sceneID="dXx-eT-4Xg">
             <objects>
-                <viewController id="ciZ-K2-Vqf" sceneMemberID="viewController">
+                <viewController id="ciZ-K2-Vqf" customClass="ListSavedWordsViewController" customModule="Motamot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W2I-Tj-p14">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-os-ffT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="40" id="Kqn-jC-PPI" customClass="WordCellTableView" customModule="Motamot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kqn-jC-PPI" id="VTM-0k-MDK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-wG-Zir">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4P8-wG-Zir" secondAttribute="trailing" id="NbU-WH-mrp"/>
+                                                <constraint firstItem="4P8-wG-Zir" firstAttribute="top" secondItem="VTM-0k-MDK" secondAttribute="top" id="QPd-ee-4n5"/>
+                                                <constraint firstItem="4P8-wG-Zir" firstAttribute="leading" secondItem="VTM-0k-MDK" secondAttribute="leading" id="aOg-0M-1nm"/>
+                                                <constraint firstAttribute="bottom" secondItem="4P8-wG-Zir" secondAttribute="bottom" id="zDP-we-Hs3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="wordLabel" destination="4P8-wG-Zir" id="FMC-3S-1wu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngU-Lh-8uZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   You have not saved any words yet.  Click on &quot; ♥ &quot; to save  a word and consult it offline.   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-nq-gO9">
+                                        <rect key="frame" x="85.333333333333329" y="297.33333333333331" width="243.66666666666669" height="48.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QWk-nq-gO9" firstAttribute="centerY" secondItem="ngU-Lh-8uZ" secondAttribute="centerY" id="Eqv-HH-MLZ"/>
+                                    <constraint firstItem="QWk-nq-gO9" firstAttribute="centerX" secondItem="ngU-Lh-8uZ" secondAttribute="centerX" id="mRJ-7E-0XP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Va1-9h-yxq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ngU-Lh-8uZ" firstAttribute="top" secondItem="Va1-9h-yxq" secondAttribute="top" id="EEp-rg-sHY"/>
+                            <constraint firstItem="ngU-Lh-8uZ" firstAttribute="trailing" secondItem="Va1-9h-yxq" secondAttribute="trailing" id="NeL-ZT-x43"/>
+                            <constraint firstItem="Va1-9h-yxq" firstAttribute="trailing" secondItem="LAg-os-ffT" secondAttribute="trailing" id="SM0-QR-Vs2"/>
+                            <constraint firstItem="LAg-os-ffT" firstAttribute="top" secondItem="Va1-9h-yxq" secondAttribute="top" id="dte-RD-I34"/>
+                            <constraint firstItem="ngU-Lh-8uZ" firstAttribute="leading" secondItem="Va1-9h-yxq" secondAttribute="leading" id="fqB-sX-enB"/>
+                            <constraint firstItem="Va1-9h-yxq" firstAttribute="bottom" secondItem="ngU-Lh-8uZ" secondAttribute="bottom" id="i1g-IF-png"/>
+                            <constraint firstItem="LAg-os-ffT" firstAttribute="leading" secondItem="Va1-9h-yxq" secondAttribute="leading" id="mKB-FQ-hDB"/>
+                            <constraint firstItem="Va1-9h-yxq" firstAttribute="bottom" secondItem="LAg-os-ffT" secondAttribute="bottom" id="oz8-Cr-1uX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="Vhw-Pq-Vr4"/>
+                    <connections>
+                        <outlet property="noWordsView" destination="ngU-Lh-8uZ" id="NdA-z3-ktS"/>
+                        <outlet property="tableView" destination="LAg-os-ffT" id="WWR-vp-Q4w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJY-6v-g8m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="361" y="1034"/>
+            <point key="canvasLocation" x="360.86956521739131" y="1033.6956521739132"/>
         </scene>
     </scenes>
     <resources>

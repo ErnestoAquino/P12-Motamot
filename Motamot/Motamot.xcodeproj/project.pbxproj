@@ -11,6 +11,9 @@
 		9474241928A39F6A0056709B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241828A39F6A0056709B /* CoreDataStack.swift */; };
 		9474241B28A3A7B90056709B /* FavoriteWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241A28A3A7B90056709B /* FavoriteWord.swift */; };
 		9474241D28A3AB3C0056709B /* LocalDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */; };
+		9474241F28A3EB9F0056709B /* ListSavedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241E28A3EB9F0056709B /* ListSavedWordsViewController.swift */; };
+		9474242128A44AEC0056709B /* WordCellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474242028A44AEC0056709B /* WordCellTableView.swift */; };
+		9474242328A44E120056709B /* ListSavedWordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474242228A44E120056709B /* ListSavedWordViewControllerExtension.swift */; };
 		94743B75289E9C2E00283548 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94743B74289E9C2E00283548 /* WordTableViewCell.swift */; };
 		94743B77289EC15D00283548 /* SearchViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94743B76289EC15D00283548 /* SearchViewControllerExtension.swift */; };
 		947A764628A298C30049FE4D /* WordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947A764528A298C30049FE4D /* WordViewControllerExtension.swift */; };
@@ -60,6 +63,9 @@
 		9474241828A39F6A0056709B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9474241A28A3A7B90056709B /* FavoriteWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWord.swift; sourceTree = "<group>"; };
 		9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryService.swift; sourceTree = "<group>"; };
+		9474241E28A3EB9F0056709B /* ListSavedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSavedWordsViewController.swift; sourceTree = "<group>"; };
+		9474242028A44AEC0056709B /* WordCellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCellTableView.swift; sourceTree = "<group>"; };
+		9474242228A44E120056709B /* ListSavedWordViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSavedWordViewControllerExtension.swift; sourceTree = "<group>"; };
 		94743B74289E9C2E00283548 /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		94743B76289EC15D00283548 /* SearchViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerExtension.swift; sourceTree = "<group>"; };
 		947A764528A298C30049FE4D /* WordViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				94A37D0328900CD800F92D80 /* Assets.xcassets */,
 				94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */,
 				94743B74289E9C2E00283548 /* WordTableViewCell.swift */,
+				9474242028A44AEC0056709B /* WordCellTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +215,7 @@
 			children = (
 				94A37D3F28901A4700F92D80 /* SearchViewController.swift */,
 				94102250289A6BB100421C0E /* WordViewController.swift */,
+				9474241E28A3EB9F0056709B /* ListSavedWordsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 				94A37D4E2891508800F92D80 /* URLSessionExtension.swift */,
 				94743B76289EC15D00283548 /* SearchViewControllerExtension.swift */,
 				947A764528A298C30049FE4D /* WordViewControllerExtension.swift */,
+				9474242228A44E120056709B /* ListSavedWordViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -397,9 +406,11 @@
 				94A37D4F2891508800F92D80 /* URLSessionExtension.swift in Sources */,
 				94A37D5428916DFF00F92D80 /* UrlType.swift in Sources */,
 				94A37D4028901A4700F92D80 /* SearchViewController.swift in Sources */,
+				9474242128A44AEC0056709B /* WordCellTableView.swift in Sources */,
 				94743B77289EC15D00283548 /* SearchViewControllerExtension.swift in Sources */,
 				94102251289A6BB100421C0E /* WordViewController.swift in Sources */,
 				94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */,
+				9474241F28A3EB9F0056709B /* ListSavedWordsViewController.swift in Sources */,
 				94A37D4228905CBC00F92D80 /* DictionaryService.swift in Sources */,
 				94A37D512891528900F92D80 /* NetworkManager.swift in Sources */,
 				94A37CF828900CD600F92D80 /* AppDelegate.swift in Sources */,
@@ -412,6 +423,7 @@
 				94A37D4D289145ED00F92D80 /* DictionaryResponse.swift in Sources */,
 				9474241D28A3AB3C0056709B /* LocalDictionaryService.swift in Sources */,
 				94A37D4528905D0500F92D80 /* UIButtonExtension.swift in Sources */,
+				9474242328A44E120056709B /* ListSavedWordViewControllerExtension.swift in Sources */,
 				9474241B28A3A7B90056709B /* FavoriteWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
