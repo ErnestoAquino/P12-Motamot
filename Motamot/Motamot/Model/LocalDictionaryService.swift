@@ -71,7 +71,6 @@ final public class LocalDictionaryService {
                 print("Unresolved error.")
             }
         }
-        
     }
 
     /**
