@@ -34,7 +34,6 @@ extension SearchViewController: SearchDelegate {
     }
 
 // Methode for got to new controlller.
-//TODO: Este metodo podria ser eliminado mas adelante
     func goToWordViewController() {
         if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "WordViewController") as? WordViewController {
             let word = dictionaryService.myLocalWord
@@ -48,6 +47,13 @@ extension SearchViewController: SearchDelegate {
      */
     func reloadTableView() {
         tableView.reloadData()
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        dictionaryService.getDefinition(word: wordTextField.text)
+        return true
     }
 }
 
