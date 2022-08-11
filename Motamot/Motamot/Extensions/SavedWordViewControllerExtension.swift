@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+import AVFoundation
+
+extension SavedWordViewController: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer , successfully flag: Bool) {
+        playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
+    }
+}
