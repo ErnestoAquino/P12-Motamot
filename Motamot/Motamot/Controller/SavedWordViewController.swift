@@ -31,6 +31,9 @@ class SavedWordViewController: UIViewController {
         deleteWord()
     }
     
+    /**
+     This method configures the properties of the visual elements.
+     */
     private func configureView() {
         saveWordButton.image =  UIImage(systemName: "heart.fill")
         wordTextLabel.text = word?.word?.uppercased()
@@ -54,6 +57,9 @@ class SavedWordViewController: UIViewController {
         definitionTextView.text = formattedText
     }
 
+    /**
+     This method plays the audio stored in the word structure.
+     */
     private func playPronunciation() {
         if let player = player, player.isPlaying {
             playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
@@ -74,10 +80,15 @@ class SavedWordViewController: UIViewController {
         }
     }
 
+    /**
+     This method removes the word from the database.
+     */
     private func deleteWord() {
         if saveWordButton.image == UIImage(systemName: "heart.fill") {
             localDictionaryService.deleteWord(word)
             saveWordButton.image = UIImage(systemName: "suit.heart")
+            saveWordButton.isEnabled = false
+            saveWordButton.image = nil
         }
     }
 }
