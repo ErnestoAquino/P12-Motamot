@@ -28,6 +28,8 @@ final public class LocalDictionaryService {
     func fetchWords() {
         favoriteWords = []
         let request: NSFetchRequest<FavoriteWord> = FavoriteWord.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "word", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
         guard let words = try? mainContext.fetch(request) else { return }
         for word in words {
             favoriteWords.append(word)
@@ -99,14 +101,27 @@ final public class LocalDictionaryService {
         }
     }
 
-    func saveWord(_ wordToSave: FavoriteWord?) {
-        guard let wordToSave = wordToSave else { return }
-        mainContext.insert(wordToSave)
-
-        do {
-            try mainContext.save()
-        } catch {
-            print("Sorry, we have encountered an error saving the word")
+    /**
+     This method checks if a word is already stored in the database.
+     
+     - parameter word: String with the word to be checked.
+     
+     - returns: If there is already an objec stored in the database it returns true, otherwise it returns false.
+     */
+    func controlWord(_ word: String?) -> Bool {
+        guard let word = word  else {
+            return false
         }
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteWord")
+        let predicate = NSPredicate(format: "word == '\(word)'")
+        request.predicate = predicate
+        let result = try? mainContext.fetch(request)
+        guard let dataResult = result as? [FavoriteWord] else {
+            return false
+        }
+        for _ in dataResult {
+            return true
+        }
+        return false
     }
 }
