@@ -10,14 +10,18 @@ import Foundation
 class DictionaryService {
     weak var viewDelegate: SearchDelegate?
     private let session: URLSessionProtocol
-     var myLocalWord: LocalWord?
-    //Test sobre usar mejor une table en lugar de una sola variable:
+    var myLocalWord: LocalWord?
     var wordsSearched: [LocalWord] = []
 
     init(_ session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
 
+    /**
+     This method retrieves the word and makes a request to the Free Dictionary API to retrieve the definition.
+     
+     - parameter word: String word for which you want to obtain the definition.
+     */
     func getDefinition(word: String?) {
         guard let word = word else {return}
         let wordWithoutSpaces = trimmingAllSpaces(word)
@@ -25,7 +29,7 @@ class DictionaryService {
             warningMessage("Mot a mot, it is a dictionary.\nPlease enter a word like: Love")
             return
         }
-        let url = createURL(word, type: .urlForDefinition)
+        let url = createURL(wordWithoutSpaces, type: .urlForDefinition)
         let networkManager = NetworkManager<DictionaryResponse>(networkManagerSession: session)
         showActivityIndicator(true)
         networkManager.getInformation(url: url) { dictionaryResponse, error in
@@ -91,22 +95,22 @@ class DictionaryService {
      */
     private func createLocalWord(_ responseDictionary: [DictionaryResponse]) {
         var audioURL = ""
-        let word = responseDictionary[0].word ?? ""
-        let origin = responseDictionary[0].origin ?? ""
+        let word = responseDictionary[0].word ?? "N/A"
+        let origin = responseDictionary[0].origin ?? "N/A"
         let phonetics: [String] = responseDictionary[0].phonetics?.compactMap({ phonetic in
             phonetic.text
-        }) ?? []
+        }) ?? ["N/A"]
         let audios: [String] = responseDictionary[0].phonetics?.compactMap({ phonetic in
             phonetic.audio
-        }) ?? []
+        }) ?? ["N/A"]
         let definitions: [String] =  responseDictionary[0].meanings?[0].definitions?.compactMap({ definition in
             definition.definition
-        }) ?? []
-        let synonyms: [String] = responseDictionary[0].meanings?[0].synonyms ?? []
-        let antonyms: [String] = responseDictionary[0].meanings?[0].antonyms ?? []
+        }) ?? ["N/A"]
+        let synonyms: [String] = responseDictionary[0].meanings?[0].synonyms ?? ["N/A"]
+        let antonyms: [String] = responseDictionary[0].meanings?[0].antonyms ?? ["N/A"]
         let examples: [String] = responseDictionary[0].meanings?[0].definitions?.compactMap({ definition in
             definition.example
-        }) ?? []
+        }) ?? ["N/A"]
         if let indexOfUrl = audios.firstIndex(where: {$0.hasPrefix("https")}) {
             audioURL = audios[indexOfUrl]
         }
@@ -124,6 +128,11 @@ class DictionaryService {
         getAudio(myLocalWord?.urlAudio)
     }
 
+    /**
+     This method performs a request to retrieve the audio of the pronunciation.
+     
+     - parameter stringWithUrl: Url string to make the audio request.
+     */
     private func getAudio(_ stringWithUrl: String?) {
         let networkManager = NetworkManager<DictionaryResponse>(networkManagerSession: session)
         networkManager.getAudio(stringWithUrl) { data in
