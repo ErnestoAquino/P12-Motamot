@@ -19,6 +19,7 @@ class ListSavedWordsViewController: UIViewController {
         localDictionaryService.fetchWords()
         checkIfDisplayMessage()
         tableView.dataSource = self
+        tableView.delegate = self
         print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
     }
 
@@ -26,6 +27,7 @@ class ListSavedWordsViewController: UIViewController {
         super.viewDidAppear(animated)
         localDictionaryService.fetchWords()
         checkIfDisplayMessage()
+        tableView.reloadData()
         print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
     }
 
