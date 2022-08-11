@@ -98,4 +98,15 @@ final public class LocalDictionaryService {
             print("Sorry, we have encountered an error saving the word.")
         }
     }
+
+    func saveWord(_ wordToSave: FavoriteWord?) {
+        guard let wordToSave = wordToSave else { return }
+        mainContext.insert(wordToSave)
+
+        do {
+            try mainContext.save()
+        } catch {
+            print("Sorry, we have encountered an error saving the word")
+        }
+    }
 }
