@@ -20,7 +20,7 @@ class ListSavedWordsViewController: UIViewController {
         checkIfDisplayMessage()
         tableView.dataSource = self
         tableView.delegate = self
-        print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
+        tableView.reloadData()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -28,16 +28,12 @@ class ListSavedWordsViewController: UIViewController {
         localDictionaryService.fetchWords()
         checkIfDisplayMessage()
         tableView.reloadData()
-        print("Hay \(localDictionaryService.favoriteWords.count) palabras ya guardadas")
     }
 
     private func checkIfDisplayMessage() {
         if localDictionaryService.favoriteWords.isEmpty {
             noWordsView.isHidden = false
-//            tableView.backgroundView = noWordsView
-            // TODO: Display message.
         } else {
-            // TODO: Do not display message
             noWordsView.isHidden = true
         }
     }
