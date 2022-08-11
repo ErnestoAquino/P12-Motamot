@@ -23,18 +23,22 @@ class WordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        isSaved(localWord?.word)
     }
 
     @IBAction func playPronunciationPressed(_ sender: UIButton) {
         playPronunciation()
     }
-  
+
     @IBAction func saveWordButtonPressed(_ sender: UIBarButtonItem) {
         saveWord()
     }
 
+    /**
+     This method configures the properties of the visual elements.
+     */
     private func configureView() {
-        saveWordButton.image = UIImage(systemName: "suit.heart")
+ 
         wordTextLabel.text = localWord?.word.uppercased()
         if localWord?.audio == nil {
             pronunciationTextLabel.isHidden = true
@@ -54,6 +58,9 @@ class WordViewController: UIViewController {
         definitionTextView.text = formattedText
     }
 
+    /**
+     This method plays the audio stored in the word structure.
+     */
     private func playPronunciation() {
         if let player = player, player.isPlaying {
             playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
@@ -74,17 +81,31 @@ class WordViewController: UIViewController {
         }
     }
 
+    /**
+     This method stores the word in the database. If it is called a second time it deletes it.
+     */
     private func saveWord() {
         if saveWordButton.image == UIImage(systemName: "suit.heart") {
-            //TODO: - Save word
             saveWordButton.image = UIImage(systemName: "heart.fill")
             localDictionaryService.saveWord(localWord)
         } else {
-            //TODO: - Delete word.
             saveWordButton.image = UIImage(systemName: "suit.heart")
             if let wordToDelete =  localWord?.word {
                 localDictionaryService.deleteWord(wordToDelete)
             }
+        }
+    }
+
+    /**
+     This method checks if the word is stored in the database.  If it already exists, it modifies the save word buton image so that the saveWordButton deletes the word if it is pressed.
+     
+     - parameter word: String of the word to be verified.
+     */
+    private func isSaved(_ word: String?) {
+        if localDictionaryService.controlWord(localWord?.word) {
+            saveWordButton.image = UIImage(systemName: "heart.fill")
+        } else {
+            saveWordButton.image = UIImage(systemName: "suit.heart")
         }
     }
 }
