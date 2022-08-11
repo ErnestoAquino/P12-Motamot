@@ -6,24 +6,78 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SavedWordViewController: UIViewController {
 
+    @IBOutlet weak var wordTextLabel: UILabel!
+    @IBOutlet weak var pronunciationTextLabel: UILabel!
+    @IBOutlet weak var playPronunciationButton: UIButton!
+    @IBOutlet weak var definitionTextView: UITextView!
+    @IBOutlet weak var saveWordButton: UIBarButtonItem!
+
+    private var localDictionaryService = LocalDictionaryService()
+    var word: FavoriteWord?
+    var player: AVAudioPlayer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureView()
+    }
+    @IBAction func playPronunciationPressed() {
+        playPronunciation()
+    }
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        deleteWord()
     }
     
+    private func configureView() {
+        saveWordButton.image =  UIImage(systemName: "heart.fill")
+        wordTextLabel.text = word?.word?.uppercased()
 
-    /*
-    // MARK: - Navigation
+        if word?.audio == nil {
+            pronunciationTextLabel.isHidden = true
+            playPronunciationButton.isHidden = true
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let formattedText =
+        """
+        Origin: \n\t• \(word?.origin ?? "---")\n
+        Phonetics: \n\t• \(word?.phonetic ?? "---")\n
+        Definition: \n\t• \(word?.definition ?? "---")\n
+        Examples: \n\t• \(word?.examples ?? "---")\n
+        Synonyms: \n\t• \(word?.synonyms ?? "---")\n
+        Antonyms: \n\t• \(word?.antonyms ?? "---")\n
+        Audio: \n\t• \(word?.audio?.description ?? "---")\n
+        urlAudio:  \n\t• \(word?.urlAudio ?? "---")
+        """
+        definitionTextView.text = formattedText
     }
-    */
 
+    private func playPronunciation() {
+        if let player = player, player.isPlaying {
+            playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
+            player.stop()
+        } else {
+            playPronunciationButton.setImage(UIImage(systemName: "stop.circle"), for: .normal)
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                guard let audioPronunciation = word?.audio else {return}
+                player = try AVAudioPlayer(data: audioPronunciation)
+                guard let player = player else {return}
+                player.delegate = self
+                player.play()
+            } catch  {
+                print("Something went wrong")
+            }
+        }
+    }
+
+    private func deleteWord() {
+        if saveWordButton.image == UIImage(systemName: "heart.fill") {
+            localDictionaryService.deleteWord(word)
+            saveWordButton.image = UIImage(systemName: "suit.heart")
+        }
+    }
 }
