@@ -28,3 +28,13 @@ extension ListSavedWordsViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension ListSavedWordsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "SavedWordViewController") as? SavedWordViewController {
+            vc.word = localDictionaryService.favoriteWords[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
