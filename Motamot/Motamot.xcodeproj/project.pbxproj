@@ -24,8 +24,6 @@
 		94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0328900CD800F92D80 /* Assets.xcassets */; };
 		94A37D0728900CD800F92D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */; };
 		94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1128900CD800F92D80 /* MotamotTests.swift */; };
-		94A37D1C28900CD800F92D80 /* MotamotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1B28900CD800F92D80 /* MotamotUITests.swift */; };
-		94A37D1E28900CD800F92D80 /* MotamotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */; };
 		94A37D3728900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */; };
 		94A37D3828900EF100F92D80 /* WigendaTypewrite-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */; };
 		94A37D3928900EF100F92D80 /* WigendaTypewrite-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */; };
@@ -82,8 +80,6 @@
 		94A37D0D28900CD800F92D80 /* MotamotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A37D1128900CD800F92D80 /* MotamotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotTests.swift; sourceTree = "<group>"; };
 		94A37D1728900CD800F92D80 /* MotamotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A37D1B28900CD800F92D80 /* MotamotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITests.swift; sourceTree = "<group>"; };
-		94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-SemiBold.ttf"; sourceTree = "<group>"; };
 		94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Heavy.ttf"; sourceTree = "<group>"; };
 		94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Bold.ttf"; sourceTree = "<group>"; };
@@ -141,7 +137,6 @@
 			children = (
 				94A37CF628900CD600F92D80 /* Motamot */,
 				94A37D1028900CD800F92D80 /* MotamotTests */,
-				94A37D1A28900CD800F92D80 /* MotamotUITests */,
 				94A37CF528900CD600F92D80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -180,15 +175,6 @@
 				94A37D1128900CD800F92D80 /* MotamotTests.swift */,
 			);
 			path = MotamotTests;
-			sourceTree = "<group>";
-		};
-		94A37D1A28900CD800F92D80 /* MotamotUITests */ = {
-			isa = PBXGroup;
-			children = (
-				94A37D1B28900CD800F92D80 /* MotamotUITests.swift */,
-				94A37D1D28900CD800F92D80 /* MotamotUITestsLaunchTests.swift */,
-			);
-			path = MotamotUITests;
 			sourceTree = "<group>";
 		};
 		94A37D3228900DD000F92D80 /* Fonts */ = {
@@ -448,8 +434,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A37D1E28900CD800F92D80 /* MotamotUITestsLaunchTests.swift in Sources */,
-				94A37D1C28900CD800F92D80 /* MotamotUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
