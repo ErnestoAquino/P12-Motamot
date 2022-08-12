@@ -1,14 +1,13 @@
 //
-//  MotamotTests.swift
+//  NetworkManagerTestCase.swift
 //  MotamotTests
 //
-//  Created by Ernesto Elias Aquino Cifuentes on 26/07/2022.
+//  Created by Ernesto Elias on 12/08/2022.
 //
 
 import XCTest
-@testable import Motamot
 
-class MotamotTests: XCTestCase {
+class NetworkManagerTestCase: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
