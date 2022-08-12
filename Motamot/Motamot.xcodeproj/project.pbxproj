@@ -40,6 +40,7 @@
 		94DA23A328A4ED5500FE062F /* SavedWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA23A228A4ED5500FE062F /* SavedWordViewController.swift */; };
 		94DA23A528A4FCD200FE062F /* SavedWordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA23A428A4FCD200FE062F /* SavedWordViewControllerExtension.swift */; };
 		94E2159028A64C8700EAAEAD /* DictionaryResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */; };
+		94E2159228A64EF000EAAEAD /* FakeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159128A64EF000EAAEAD /* FakeResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		94DA23A228A4ED5500FE062F /* SavedWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordViewController.swift; sourceTree = "<group>"; };
 		94DA23A428A4FCD200FE062F /* SavedWordViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordViewControllerExtension.swift; sourceTree = "<group>"; };
 		94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DictionaryResponse.json; sourceTree = "<group>"; };
+		94E2159128A64EF000EAAEAD /* FakeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 		94E2158E28A64B7F00EAAEAD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				94E2159128A64EF000EAAEAD /* FakeResponse.swift */,
 				94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */,
 			);
 			path = Resources;
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */,
+				94E2159228A64EF000EAAEAD /* FakeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
