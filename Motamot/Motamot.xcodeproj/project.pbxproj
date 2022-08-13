@@ -23,7 +23,6 @@
 		94A37D0228900CD600F92D80 /* Motamot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */; };
 		94A37D0428900CD800F92D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0328900CD800F92D80 /* Assets.xcassets */; };
 		94A37D0728900CD800F92D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D0528900CD800F92D80 /* LaunchScreen.storyboard */; };
-		94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A37D1128900CD800F92D80 /* MotamotTests.swift */; };
 		94A37D3728900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */; };
 		94A37D3828900EF100F92D80 /* WigendaTypewrite-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */; };
 		94A37D3928900EF100F92D80 /* WigendaTypewrite-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */; };
@@ -41,17 +40,13 @@
 		94DA23A528A4FCD200FE062F /* SavedWordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA23A428A4FCD200FE062F /* SavedWordViewControllerExtension.swift */; };
 		94E2159028A64C8700EAAEAD /* DictionaryResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */; };
 		94E2159228A64EF000EAAEAD /* FakeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159128A64EF000EAAEAD /* FakeResponse.swift */; };
+		94E2159428A656CE00EAAEAD /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159328A656CE00EAAEAD /* URLSessionFake.swift */; };
+		94E2159628A66C8B00EAAEAD /* FakeCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159528A66C8B00EAAEAD /* FakeCoreDataStack.swift */; };
+		94E2159828A6715A00EAAEAD /* NetworkManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159728A6715A00EAAEAD /* NetworkManagerTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		94A37D0E28900CD800F92D80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94A37CEC28900CD600F92D80 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94A37CF328900CD600F92D80;
-			remoteInfo = Motamot;
-		};
-		94A37D1828900CD800F92D80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 94A37CEC28900CD600F92D80 /* Project object */;
 			proxyType = 1;
@@ -80,8 +75,6 @@
 		94A37D0628900CD800F92D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94A37D0828900CD800F92D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94A37D0D28900CD800F92D80 /* MotamotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94A37D1128900CD800F92D80 /* MotamotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotamotTests.swift; sourceTree = "<group>"; };
-		94A37D1728900CD800F92D80 /* MotamotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotamotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A37D3328900EF100F92D80 /* WigendaTypewrite-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-SemiBold.ttf"; sourceTree = "<group>"; };
 		94A37D3428900EF100F92D80 /* WigendaTypewrite-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Heavy.ttf"; sourceTree = "<group>"; };
 		94A37D3528900EF100F92D80 /* WigendaTypewrite-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WigendaTypewrite-Bold.ttf"; sourceTree = "<group>"; };
@@ -99,6 +92,9 @@
 		94DA23A428A4FCD200FE062F /* SavedWordViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordViewControllerExtension.swift; sourceTree = "<group>"; };
 		94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DictionaryResponse.json; sourceTree = "<group>"; };
 		94E2159128A64EF000EAAEAD /* FakeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponse.swift; sourceTree = "<group>"; };
+		94E2159328A656CE00EAAEAD /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		94E2159528A66C8B00EAAEAD /* FakeCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCoreDataStack.swift; sourceTree = "<group>"; };
+		94E2159728A6715A00EAAEAD /* NetworkManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,13 +106,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		94A37D0A28900CD800F92D80 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94A37D1428900CD800F92D80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -150,7 +139,6 @@
 			children = (
 				94A37CF428900CD600F92D80 /* Motamot.app */,
 				94A37D0D28900CD800F92D80 /* MotamotTests.xctest */,
-				94A37D1728900CD800F92D80 /* MotamotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				94E2158E28A64B7F00EAAEAD /* Resources */,
-				94A37D1128900CD800F92D80 /* MotamotTests.swift */,
+				94E2159728A6715A00EAAEAD /* NetworkManagerTestCase.swift */,
 			);
 			path = MotamotTests;
 			sourceTree = "<group>";
@@ -269,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				94E2159128A64EF000EAAEAD /* FakeResponse.swift */,
+				94E2159328A656CE00EAAEAD /* URLSessionFake.swift */,
+				94E2159528A66C8B00EAAEAD /* FakeCoreDataStack.swift */,
 				94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */,
 			);
 			path = Resources;
@@ -312,24 +302,6 @@
 			productReference = 94A37D0D28900CD800F92D80 /* MotamotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		94A37D1628900CD800F92D80 /* MotamotUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94A37D2728900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotUITests" */;
-			buildPhases = (
-				94A37D1328900CD800F92D80 /* Sources */,
-				94A37D1428900CD800F92D80 /* Frameworks */,
-				94A37D1528900CD800F92D80 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94A37D1928900CD800F92D80 /* PBXTargetDependency */,
-			);
-			name = MotamotUITests;
-			productName = MotamotUITests;
-			productReference = 94A37D1728900CD800F92D80 /* MotamotUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -344,10 +316,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					94A37D0C28900CD800F92D80 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 94A37CF328900CD600F92D80;
-					};
-					94A37D1628900CD800F92D80 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 94A37CF328900CD600F92D80;
 					};
@@ -368,7 +336,6 @@
 			targets = (
 				94A37CF328900CD600F92D80 /* Motamot */,
 				94A37D0C28900CD800F92D80 /* MotamotTests */,
-				94A37D1628900CD800F92D80 /* MotamotUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -393,13 +360,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94E2159028A64C8700EAAEAD /* DictionaryResponse.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94A37D1528900CD800F92D80 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,15 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94A37D1228900CD800F92D80 /* MotamotTests.swift in Sources */,
+				94E2159828A6715A00EAAEAD /* NetworkManagerTestCase.swift in Sources */,
+				94E2159428A656CE00EAAEAD /* URLSessionFake.swift in Sources */,
+				94E2159628A66C8B00EAAEAD /* FakeCoreDataStack.swift in Sources */,
 				94E2159228A64EF000EAAEAD /* FakeResponse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94A37D1328900CD800F92D80 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,11 +415,6 @@
 			isa = PBXTargetDependency;
 			target = 94A37CF328900CD600F92D80 /* Motamot */;
 			targetProxy = 94A37D0E28900CD800F92D80 /* PBXContainerItemProxy */;
-		};
-		94A37D1928900CD800F92D80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94A37CF328900CD600F92D80 /* Motamot */;
-			targetProxy = 94A37D1828900CD800F92D80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -702,42 +652,6 @@
 			};
 			name = Release;
 		};
-		94A37D2828900CD800F92D80 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QD45F7JUWF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Motamot;
-			};
-			name = Debug;
-		};
-		94A37D2928900CD800F92D80 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QD45F7JUWF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ernestoaquino.MotamotUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Motamot;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -764,15 +678,6 @@
 			buildConfigurations = (
 				94A37D2528900CD800F92D80 /* Debug */,
 				94A37D2628900CD800F92D80 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94A37D2728900CD800F92D80 /* Build configuration list for PBXNativeTarget "MotamotUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94A37D2828900CD800F92D80 /* Debug */,
-				94A37D2928900CD800F92D80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
