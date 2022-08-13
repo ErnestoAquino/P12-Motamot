@@ -12,6 +12,8 @@ class FakeResponse {
     static let emptyRequest: URLRequest? = nil
     static let incorrectData = "Error".data(using: .utf8)
     static let audioData = "audio pronunciation".data(using: .utf8)
+    static let url: String? = "https://api.dictionaryapi.dev/media/pronunciations/en/loving-us.mp3"
+
 
     static var correctData: Data? {
         let bundle = Bundle(for: FakeResponse.self)
@@ -38,4 +40,6 @@ class FakeResponse {
         return response
     }
 
+    class FakeResponseError: Error {}
+    static let anError = FakeResponseError()
 }
