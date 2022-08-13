@@ -49,6 +49,7 @@ final public class LocalDictionaryService {
         } catch  {
             print("Sorry we have encountered a problem deleting word")
         }
+        fetchWords()
     }
 
     /**
