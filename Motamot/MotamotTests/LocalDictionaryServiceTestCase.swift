@@ -363,4 +363,58 @@ class LocalDictionaryServiceTestCase: XCTestCase {
         //Then
         XCTAssertFalse(wordExist)
     }
+
+    func testGivenMaincontextIncorrect_WhenTryCallSaveWord_ThenShouldHaveProblemSaving() {
+        //Given
+        let persistentContainer = NSPersistentContainer(name: "I do not exist")
+        let mainContext = persistentContainer.viewContext
+        let localDictionaryService = LocalDictionaryService(mainContext: mainContext)
+        let wordTest = LocalWord(word: "Num6qT38kz%w7&2W2SDQMh7^KQzpv2^",
+                             phonetic: "Jkp6Sam%qNu82R7gVg3dn$rZ",
+                             audio: "df%6YEx*NNxTHj6S5H*!359@".data(using: .utf8),
+                             origin: "F6GG625w2!hTFD6uEbM35xfK",
+                             definition: "2@PDa545MTmS^hdd8#Nt*XNj",
+                             urlAudio: "https://api.dictionaryapi.dev/media/pronunciations/en/test.mp3",
+                             synonyms: "mg$m862VG*u6a6haEaa^J%@5",
+                             antonyms: "^Qt6#3yff@8j3pXSNRAymE7w",
+                             examples: "*CywC8RhM6#mEJdYbqzCJ7@V")
+        //Given
+        localDictionaryService.saveWord(wordTest)
+        //Then
+        XCTAssertTrue(localDictionaryService.problemSaving)
+    }
+
+    func testGivenMaincontextIncorrect_WhenTryCallFetchWords_ThenShouldHaveProblemFetching() {
+        //Given
+        let persistentContainer = NSPersistentContainer(name: "I do not exist")
+        let mainContext = persistentContainer.viewContext
+        let localDictionaryService = LocalDictionaryService(mainContext: mainContext)
+        //Given
+        localDictionaryService.fetchWords()
+        //Then
+        XCTAssertTrue(localDictionaryService.problemFetching)
+    }
+
+    func testGivenMaincontextIncorrect_WhenTryCallControlWords_ThenShouldHaveProblemFetching() {
+        //Given
+        let persistentContainer = NSPersistentContainer(name: "I do not exist")
+        let mainContext = persistentContainer.viewContext
+        let localDictionaryService = LocalDictionaryService(mainContext: mainContext)
+        //Given
+        let test = localDictionaryService.controlWord("word")
+        //Then
+        XCTAssertTrue(localDictionaryService.problemFetching)
+        XCTAssertEqual(test, false)
+    }
+
+    func testGivenMaincontextIncorrect_WhenTryCallDeleteWord_ThenShouldHaveProblemFetching() {
+        //Given
+        let persistentContainer = NSPersistentContainer(name: "I do not exist")
+        let mainContext = persistentContainer.viewContext
+        let localDictionaryService = LocalDictionaryService(mainContext: mainContext)
+        //Given
+        localDictionaryService.deleteWord("word")
+        //Then
+        XCTAssertTrue(localDictionaryService.problemFetching)
+    }
 }
