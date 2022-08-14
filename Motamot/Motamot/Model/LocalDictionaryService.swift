@@ -15,6 +15,8 @@ import CoreData
  */
 
 final public class LocalDictionaryService {
+    private (set) var problemSaving = false
+    private (set) var problemFetching = false
     private let mainContext: NSManagedObjectContext
     var favoriteWords: [FavoriteWord] = []
 
@@ -30,7 +32,10 @@ final public class LocalDictionaryService {
         let request: NSFetchRequest<FavoriteWord> = FavoriteWord.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "word", ascending: true)
         request.sortDescriptors = [sortDescriptor]
-        guard let words = try? mainContext.fetch(request) else { return }
+        guard let words = try? mainContext.fetch(request) else {
+            problemFetching = true
+            return
+        }
         for word in words {
             favoriteWords.append(word)
         }
@@ -44,11 +49,8 @@ final public class LocalDictionaryService {
     func deleteWord(_ word: FavoriteWord?) {
         guard let wordToDelete = word else { return }
         mainContext.delete(wordToDelete)
-        do {
-            try mainContext.save()
-        } catch  {
-            print("Sorry we have encountered a problem deleting word")
-        }
+
+        saveContext()
         fetchWords()
     }
 
@@ -61,19 +63,14 @@ final public class LocalDictionaryService {
         let fechtRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteWord")
         let predicate = NSPredicate(format: "word == '\(word)'")
         fechtRequest.predicate = predicate
-        let result = try? mainContext.fetch(fechtRequest)
-        guard let result = result else { return }
-        if let resultData = result as? [FavoriteWord] {
-            for object in resultData {
-                mainContext.delete(object)
-            }
-            do {
-                try mainContext.save()
-                print("Word: | \(word) | has been delete.")
-            } catch  {
-                print("Unresolved error.")
-            }
+        guard let result = try? mainContext.fetch(fechtRequest) as? [FavoriteWord] else {
+            problemFetching = true
+            return
         }
+        for word in result {
+            mainContext.delete(word)
+        }
+        saveContext()
     }
 
     /**
@@ -94,12 +91,7 @@ final public class LocalDictionaryService {
         word.synonyms = wordToSave.synonyms
         word.examples = wordToSave.examples
 
-        do {
-            try mainContext.save()
-            print("Word: | \(wordToSave.word) | has been saved")
-        } catch  {
-            print("Sorry, we have encountered an error saving the word.")
-        }
+        saveContext()
     }
 
     /**
@@ -116,13 +108,25 @@ final public class LocalDictionaryService {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteWord")
         let predicate = NSPredicate(format: "word == '\(word)'")
         request.predicate = predicate
-        let result = try? mainContext.fetch(request)
-        guard let dataResult = result as? [FavoriteWord] else {
+        guard let result = try? mainContext.fetch(request) as? [FavoriteWord] else {
+            problemFetching = true
             return false
         }
-        for _ in dataResult {
+        for _ in result {
             return true
         }
         return false
+    }
+
+    /**
+     This method try to save the context. If it fails, it prints a message on the console and changes the value of problemSaving variable to true.
+     */
+    private func saveContext() {
+        do {
+            try mainContext.save()
+        } catch {
+            print("Sorry, we found an error while saving context.")
+            problemSaving = true
+        }
     }
 }
