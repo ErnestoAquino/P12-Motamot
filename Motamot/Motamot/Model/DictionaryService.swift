@@ -55,26 +55,16 @@ class DictionaryService {
      ```
      createURL(word, type: .urlForDefinition)//The function will create the URL using the endpoind + String.
      ```
-     If you want a URL for the audio select:
-     ```
-     createURL(url, type: .urlForAudio)//The function will create a url with the string passed in parameter.
-     ```
-
      - parameter stringURL: String optional to create the URL
      - parameter type:      Type of url you want to obtain.
      
      - returns: Optional URL of the desired type.
      */
-    private func createURL(_ stringURL: String?, type: UrlType) -> URL?{
+    private func createURL(_ stringURL: String, type: UrlType) -> URL?{
         let endPoint = "https://api.dictionaryapi.dev/api/v2/entries/en/"
-        guard let stringURL = stringURL else {return nil}
-
         switch type {
         case .urlForDefinition:
             let url = URL(string: endPoint + stringURL)
-            return url
-        case .urlForAudio:
-            let url = URL(string: stringURL)
             return url
         }
     }
