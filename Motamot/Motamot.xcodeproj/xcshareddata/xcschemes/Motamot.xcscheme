@@ -39,16 +39,6 @@
                ReferencedContainer = "container:Motamot.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94A37D1628900CD800F92D80"
-               BuildableName = "MotamotUITests.xctest"
-               BlueprintName = "MotamotUITests"
-               ReferencedContainer = "container:Motamot.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
