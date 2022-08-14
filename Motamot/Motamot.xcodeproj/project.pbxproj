@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		94102251289A6BB100421C0E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94102250289A6BB100421C0E /* WordViewController.swift */; };
 		942DC10828A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942DC10728A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift */; };
+		94331C1028A9A9EB00D4C4E7 /* DictionaryResponseWithoutElements.json in Resources */ = {isa = PBXBuildFile; fileRef = 94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */; };
 		9474241928A39F6A0056709B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241828A39F6A0056709B /* CoreDataStack.swift */; };
 		9474241B28A3A7B90056709B /* FavoriteWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241A28A3A7B90056709B /* FavoriteWord.swift */; };
 		9474241D28A3AB3C0056709B /* LocalDictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */; };
@@ -61,6 +62,7 @@
 /* Begin PBXFileReference section */
 		94102250289A6BB100421C0E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		942DC10728A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryServiceTestCase.swift; sourceTree = "<group>"; };
+		94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DictionaryResponseWithoutElements.json; sourceTree = "<group>"; };
 		9474241828A39F6A0056709B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9474241A28A3A7B90056709B /* FavoriteWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWord.swift; sourceTree = "<group>"; };
 		9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryService.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				94E2159528A66C8B00EAAEAD /* FakeCoreDataStack.swift */,
 				94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */,
 				94AF96F828A915DE00041C84 /* DictionaryServiceMockDelegate.swift */,
+				94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94331C1028A9A9EB00D4C4E7 /* DictionaryResponseWithoutElements.json in Resources */,
 				94E2159028A64C8700EAAEAD /* DictionaryResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
