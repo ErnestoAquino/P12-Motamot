@@ -77,5 +77,18 @@ class DictionaryServiceTestCase: XCTestCase {
         XCTAssertNotNil(dictionaryService.myLocalWord)
     }
 
+    func testGivenIncorrectDataInApiResponse_WhenCallGetDefinition_ThenWarningMessageShouldBeCalled() async {
+        let exp = expectation(description: "Wait for function")
+        //Given
+        let session = URLSessionFake(data: FakeResponse.incorrectData, response: FakeResponse.responseOK, error: nil)
+        let delegate = DictionaryServiceMockDelegate()
+        let dictionaryService = DictionaryService(session)
+        dictionaryService.viewDelegate = delegate
+        //When
+        dictionaryService.getDefinition(word: "test")
+        exp.fulfill()
+        await waitForExpectations(timeout: 1)
+        //Then
+        XCTAssertTrue(delegate.warningMessageIsCalled)
+    }
 }
-
