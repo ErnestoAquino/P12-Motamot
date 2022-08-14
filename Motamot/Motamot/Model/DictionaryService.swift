@@ -140,8 +140,6 @@ class DictionaryService {
                 if let myLocalWord = self.myLocalWord {
                     self.wordsSearched.append(myLocalWord)
                 }
-                self.printWord(self.myLocalWord)
-                print(self.wordsSearched.count)
                 self.goToWordViewController()
                 return
             }
@@ -149,28 +147,7 @@ class DictionaryService {
             if let myLocalWord = self.myLocalWord {
                 self.wordsSearched.append(myLocalWord)
             }
-            self.printWord(self.myLocalWord)
-            print(self.wordsSearched.count)
             self.goToWordViewController()
         }
     }
-
-//MARK: - Funciones de test
-
-    private func printWord(_ word: LocalWord?) {
-        let text =
-        """
-        Word: \n\(word?.word ?? "---")
-        Origin: \n\(word?.origin ?? "---")
-        Phonetic: \n\(word?.phonetic ?? "---")
-        Definition: \n\(word?.definition ?? "---")
-        Examples: \n\(word?.examples ?? "---")
-        Synonyms: \n\(word?.synonyms ?? "---")
-        Antonyms: \n\(word?.antonyms ?? "---")
-        Audio: \n\(word?.audio?.description ?? "---")
-        urlAudio:  \n\(word?.urlAudio ?? "---")
-        """
-        print(text)
-    }
-    
 }
