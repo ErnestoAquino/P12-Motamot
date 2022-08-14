@@ -22,9 +22,7 @@ class NetworkManagerTestCase: XCTestCase {
     }
 
     private func createUrlForTest() -> URL? {
-        guard let urlTest = URL(string: "https://urlForTests.com/") else {
-            return nil
-        }
+        let urlTest = URL(string: "https://urlForTests.com/")
         return urlTest
     }
 
