@@ -23,7 +23,10 @@ class DictionaryService {
      - parameter word: String word for which you want to obtain the definition.
      */
     func getDefinition(word: String?) {
-        guard let word = word else {return}
+        guard let word = word else {
+            warningMessage("Mot a mot, it is a dictionary.\nPlease enter a word like: Love")
+            return
+        }
         let wordWithoutSpaces = trimmingAllSpaces(word)
         guard wordWithoutSpaces.isEmpty == false else {
             warningMessage("Mot a mot, it is a dictionary.\nPlease enter a word like: Love")
