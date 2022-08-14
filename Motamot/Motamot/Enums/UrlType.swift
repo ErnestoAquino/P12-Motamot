@@ -9,5 +9,4 @@ import Foundation
 
 enum UrlType {
     case urlForDefinition
-    case urlForAudio
 }
