@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Mixpanel
 
 class SearchViewController: UIViewController {
 
@@ -32,5 +33,6 @@ class SearchViewController: UIViewController {
 
     @IBAction func searchButtonPressed() {
         dictionaryService.getDefinition(word: wordTextField.text)
+        Mixpanel.mainInstance().track(event: "Button search pressed")
     }
 }

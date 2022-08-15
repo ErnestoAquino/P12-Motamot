@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import Mixpanel
 
 final class CoreDataStack {
     static let shared = CoreDataStack()
@@ -18,6 +19,7 @@ final class CoreDataStack {
         persistentContainer = NSPersistentContainer(name: persistentContainerName)
         persistentContainer.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
+                Mixpanel.mainInstance().track(event: "Error loading container")
                 fatalError("Unresolved error \(error.userInfo) for: \(storeDescription.description)")
             }
         }

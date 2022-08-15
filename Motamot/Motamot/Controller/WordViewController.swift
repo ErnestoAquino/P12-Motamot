@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Mixpanel
 
 class WordViewController: UIViewController {
 
@@ -88,10 +89,12 @@ class WordViewController: UIViewController {
         if saveWordButton.image == UIImage(systemName: "suit.heart") {
             saveWordButton.image = UIImage(systemName: "heart.fill")
             localDictionaryService.saveWord(localWord)
+            Mixpanel.mainInstance().track(event: "Word has been saved")
         } else {
             saveWordButton.image = UIImage(systemName: "suit.heart")
             if let wordToDelete =  localWord?.word {
                 localDictionaryService.deleteWord(wordToDelete)
+                Mixpanel.mainInstance().track(event: "Word has been deleted")
             }
         }
     }

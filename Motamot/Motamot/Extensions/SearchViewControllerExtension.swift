@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Mixpanel
 
 
 extension SearchViewController: SearchDelegate {
@@ -53,6 +54,8 @@ extension SearchViewController: SearchDelegate {
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         dictionaryService.getDefinition(word: wordTextField.text)
+        wordTextField.resignFirstResponder()
+        Mixpanel.mainInstance().track(event: "Keyboard for search")
         return true
     }
 }
