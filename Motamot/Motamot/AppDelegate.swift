@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import Mixpanel
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Mixpanel.initialize(token: "09f369b5e80bf17a69a70961b750a2f7")
+        Mixpanel.mainInstance().loggingEnabled = true
+        Mixpanel.mainInstance().track(event: "Sign Up", properties: [
+            "source": "Pat's affiliate site",
+            "Opted out of email": true
+        ])
         // Override point for customization after application launch.
         return true
     }

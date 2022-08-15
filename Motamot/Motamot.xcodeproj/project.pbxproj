@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9404417B28AA576200C13890 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9404417A28AA576200C13890 /* Mixpanel */; };
 		94102251289A6BB100421C0E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94102250289A6BB100421C0E /* WordViewController.swift */; };
 		942DC10828A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942DC10728A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift */; };
 		94331C1028A9A9EB00D4C4E7 /* DictionaryResponseWithoutElements.json in Resources */ = {isa = PBXBuildFile; fileRef = 94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9404417B28AA576200C13890 /* Mixpanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +294,9 @@
 			dependencies = (
 			);
 			name = Motamot;
+			packageProductDependencies = (
+				9404417A28AA576200C13890 /* Mixpanel */,
+			);
 			productName = Motamot;
 			productReference = 94A37CF428900CD600F92D80 /* Motamot.app */;
 			productType = "com.apple.product-type.application";
@@ -342,6 +347,9 @@
 				Base,
 			);
 			mainGroup = 94A37CEB28900CD600F92D80;
+			packageReferences = (
+				9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+			);
 			productRefGroup = 94A37CF528900CD600F92D80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -699,6 +707,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9404417A28AA576200C13890 /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		94A37D0028900CD600F92D80 /* Motamot.xcdatamodeld */ = {
