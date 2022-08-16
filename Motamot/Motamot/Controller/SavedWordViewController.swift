@@ -62,6 +62,7 @@ class SavedWordViewController: UIViewController {
      This method plays the audio stored in the word structure.
      */
     private func playPronunciation() {
+        Mixpanel.mainInstance().track(event: "Play button has been pressed")
         if let player = player, player.isPlaying {
             playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
             player.stop()
@@ -87,7 +88,7 @@ class SavedWordViewController: UIViewController {
     private func deleteWord() {
         if saveWordButton.image == UIImage(systemName: "heart.fill") {
             localDictionaryService.deleteWord(word)
-            Mixpanel.mainInstance().track(event: "Word has bee deleted")
+            Mixpanel.mainInstance().track(event: "Word has been deleted")
             saveWordButton.image = UIImage(systemName: "suit.heart")
             saveWordButton.isEnabled = false
             saveWordButton.image = nil
