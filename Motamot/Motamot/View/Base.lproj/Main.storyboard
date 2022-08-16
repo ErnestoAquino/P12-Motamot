@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,7 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="black_pink"/>
+                        <color key="selectedImageTintColor" name="black_pink"/>
                     </tabBar>
                     <connections>
                         <segue destination="2jM-Gn-uaI" kind="relationship" relationship="viewControllers" id="qBS-aj-RjY"/>
@@ -48,20 +50,22 @@
             <objects>
                 <navigationController id="2jM-Gn-uaI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" id="ed7-Pm-e0h">
-                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large" renderingMode="template"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZP-W2-nEN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="black_darkRose"/>
                         <navigationBarAppearance key="standardAppearance">
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                                <color key="textColor" name="black_pink"/>
                             </textAttributes>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                                <color key="textColor" name="black_pink"/>
                             </textAttributes>
                         </navigationBarAppearance>
                     </navigationBar>
@@ -99,7 +103,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sng-vZ-cFc">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="grey_pink#8d2d6f"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bmG-ot-Blm"/>
                                         </constraints>
@@ -114,10 +118,11 @@
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-V2-UoY">
                                         <rect key="frame" x="0.0" y="40" width="294" height="30"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="grey_pink"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Da5-MR-ZG4"/>
                                         </constraints>
+                                        <color key="color" name="grey_pink"/>
                                     </activityIndicatorView>
                                 </subviews>
                             </stackView>
@@ -258,7 +263,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5ov-YL-hKw"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="darkGrey_lightPink"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=" " buttonSize="large">
                                             <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
@@ -311,18 +316,23 @@
         <scene sceneID="B26-zw-TBY">
             <objects>
                 <navigationController id="7JK-jF-3Nw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" id="i0q-px-LsB"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" id="i0q-px-LsB">
+                        <imageReference key="image" image="heart" catalog="system" renderingMode="template"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gSS-FP-tTi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="black_darkRose"/>
                         <navigationBarAppearance key="standardAppearance">
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                                <color key="textColor" name="black_pink"/>
                             </textAttributes>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="25"/>
+                                <color key="textColor" name="black_pink"/>
                             </textAttributes>
                         </navigationBarAppearance>
                     </navigationBar>
@@ -379,7 +389,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   You have not saved any words yet.  Click on &quot; ♥ &quot; to save  a word and consult it offline.   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-nq-gO9">
                                         <rect key="frame" x="85.333333333333329" y="297.33333333333331" width="243.66666666666669" height="48.666666666666686"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" name="darkGrey_lightPink"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -455,7 +465,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UF5-hP-rFY"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="darkGrey_lightPink"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=" " buttonSize="large">
                                             <imageReference key="image" image="play.circle" catalog="system" symbolScale="large"/>
@@ -510,6 +520,21 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
+        <namedColor name="black_darkRose">
+            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="black_pink">
+            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="darkGrey_lightPink">
+            <color red="0.32941177490000001" green="0.33333334329999997" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="grey_pink">
+            <color red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="grey_pink#8d2d6f">
+            <color red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
