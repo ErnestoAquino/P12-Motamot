@@ -294,7 +294,7 @@
                     <navigationItem key="navigationItem" id="SR4-m1-Bja">
                         <barButtonItem key="rightBarButtonItem" id="Dpp-TY-GeU">
                             <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" name="black_pink"/>
                             <connections>
                                 <action selector="saveWordButtonPressed:" destination="wlK-hb-NeH" id="Y2L-Du-8wb"/>
                             </connections>
@@ -366,7 +366,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-wG-Zir">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                     <fontDescription key="fontDescription" name="WigendaTypewrite-Bold" family="WigendaTypewrite" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" name="darkGrey_lightPink"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -496,7 +496,7 @@
                     <navigationItem key="navigationItem" id="rKo-2A-TAe">
                         <barButtonItem key="rightBarButtonItem" id="Vov-qi-yhN">
                             <imageReference key="image" image="suit.heart" catalog="system" symbolScale="large"/>
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" name="black_pink"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="3nb-JN-PeK" id="DGJ-VC-cdk"/>
                             </connections>
@@ -521,19 +521,19 @@
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <namedColor name="black_darkRose">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="black_pink">
-            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="darkGrey_lightPink">
-            <color red="0.32941177490000001" green="0.33333334329999997" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.32899999618530273" green="0.33300000429153442" blue="0.32899999618530273" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="grey_pink">
-            <color red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="grey_pink#8d2d6f">
-            <color red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.66699999570846558" green="0.66699999570846558" blue="0.66699999570846558" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
