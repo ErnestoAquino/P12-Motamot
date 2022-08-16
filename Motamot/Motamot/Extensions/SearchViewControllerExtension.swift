@@ -58,17 +58,50 @@ extension SearchViewController: UITextFieldDelegate {
         Mixpanel.mainInstance().track(event: "Keyboard for search")
         return true
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.wordTextField.resignFirstResponder()
+    }
 }
 
-//extension SearchViewController: UITableViewDataSource {
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//}
+extension SearchViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let numbersOfRows = dictionaryService.wordsSearched.count
+        return numbersOfRows
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordCelling", for: indexPath) as? WordTableViewCell else {
+            return UITableViewCell()
+        }
+        let word = dictionaryService.wordsSearched[indexPath.row].word
+        cell.configuration(word)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Search history"
+    }
+}
+
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "WordViewController") as? WordViewController {
+            destinationVC.localWord = dictionaryService.wordsSearched[indexPath.row]
+            self.navigationController?.pushViewController(destinationVC, animated: true)
+        }
+    }
+}
+
+extension SearchViewController {
+    func checkIfDisplayMessage() {
+        if dictionaryService.wordsSearched.isEmpty {
+            tableView.isHidden = true
+        } else {
+            tableView.isHidden = false
+        }
+    }
+}
