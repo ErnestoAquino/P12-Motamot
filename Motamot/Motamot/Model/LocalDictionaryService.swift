@@ -41,6 +41,14 @@ final public class LocalDictionaryService {
         }
     }
 
+    func clearFavorites() {
+        for word in favoriteWords {
+            deleteWord(word)
+        }
+        saveContext()
+        fetchWords()
+    }
+
     /**
      This method delete a FavoriteWord from database.
      
