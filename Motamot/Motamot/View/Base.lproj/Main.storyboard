@@ -133,7 +133,7 @@
                                         <string key="text">Welcome!
 Mot à mot is a little dictionary  that provides the definition  and pronunciation  of a word.</string>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                        <color key="textColor" name="black_pink"/>
+                                        <color key="textColor" name="darkGrey_lightPink"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
