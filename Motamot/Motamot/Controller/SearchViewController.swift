@@ -14,21 +14,26 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
-    static var cellidentifier = "WordCell"
+    @IBOutlet weak var noSearchHistory: UIView!
     
     let dictionaryService = DictionaryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         dictionaryService.viewDelegate = self
         self.wordTextField.delegate = self
-
         searchButton.round()
         activityIndicator.isHidden = true
+        tableView.reloadData()
+        checkIfDisplayMessage()
     }
 
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        wordTextField.resignFirstResponder()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.reloadData()
+        checkIfDisplayMessage()
     }
 
     @IBAction func searchButtonPressed() {
