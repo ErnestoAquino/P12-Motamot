@@ -90,6 +90,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hello" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9kY-ui-Jvp">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Word you want to know its definition." label="Word label"/>
                                         <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
@@ -104,6 +105,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sng-vZ-cFc">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
                                         <color key="backgroundColor" name="grey_pink#8d2d6f"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Search for the word entered." label="Button search."/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bmG-ot-Blm"/>
                                         </constraints>
@@ -231,6 +233,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qw1-6q-QgK">
                                 <rect key="frame" x="20" y="20" width="374" height="70"/>
+                                <accessibility key="accessibilityConfiguration" hint="Word found." label="Word."/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="qbI-BW-Z4R"/>
                                 </constraints>
@@ -241,6 +244,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="byc-P2-5EQ">
                                 <rect key="frame" x="20" y="180" width="374" height="536"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Definition of word." label="Definition"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="12"/>
@@ -251,6 +255,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-lI-r6Q">
                                         <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="50"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AOo-8d-Pzd"/>
                                         </constraints>
@@ -260,6 +267,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnO-mL-eMz">
                                         <rect key="frame" x="308.66666666666669" y="0.0" width="65.333333333333314" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Play pronunciation of word." label="Play pronunciation."/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="5ov-YL-hKw"/>
                                         </constraints>
@@ -365,6 +373,9 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-wG-Zir">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <accessibility key="accessibilityConfiguration" hint="Word  saved." label="Word.">
+                                                        <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                                    </accessibility>
                                                     <fontDescription key="fontDescription" name="WigendaTypewrite-Bold" family="WigendaTypewrite" pointSize="20"/>
                                                     <color key="textColor" name="darkGrey_lightPink"/>
                                                     <nil key="highlightedColor"/>
@@ -388,6 +399,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   You have not saved any words yet.  Click on &quot; ♥ &quot; to save  a word and consult it offline.   " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-nq-gO9">
                                         <rect key="frame" x="85.333333333333329" y="297.33333333333331" width="243.66666666666669" height="48.666666666666686"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Tips for using the app." label="Tip.">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                         <color key="textColor" name="darkGrey_lightPink"/>
                                         <nil key="highlightedColor"/>
@@ -433,6 +447,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HELLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-DK-PNA">
                                 <rect key="frame" x="20" y="20" width="374" height="70"/>
+                                <accessibility key="accessibilityConfiguration" hint="Word found." label="Word">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="jld-Dn-wce"/>
                                 </constraints>
@@ -443,6 +460,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WBy-nX-jfn">
                                 <rect key="frame" x="20" y="180" width="374" height="536"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <accessibility key="accessibilityConfiguration" hint="Word definition." label="Definition."/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="WigendaTypewrite" family="WigendaTypewrite" pointSize="12"/>
@@ -453,6 +471,10 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pronunciation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AU7-6b-46O">
                                         <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="50"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gNJ-9H-QHu"/>
                                         </constraints>
@@ -462,6 +484,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDH-Tg-q1q">
                                         <rect key="frame" x="308.66666666666669" y="0.0" width="65.333333333333314" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Play pronunciation of word found." label="Pley pronunciation."/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UF5-hP-rFY"/>
                                         </constraints>
