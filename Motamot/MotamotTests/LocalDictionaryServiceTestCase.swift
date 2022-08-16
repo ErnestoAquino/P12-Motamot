@@ -417,4 +417,46 @@ class LocalDictionaryServiceTestCase: XCTestCase {
         //Then
         XCTAssertTrue(localDictionaryService.problemFetching)
     }
+
+    func testGivenThreeStoredWords_WhenCallClearFavoriteWords_ThenFavoriteWordShouldBeEmpty() {
+        let coreData = FakeCoreDataStack()
+        let localDictionaryService = LocalDictionaryService(mainContext: coreData.mainContext)
+        let wordOne = LocalWord(word: "word one",
+                             phonetic: "phonetic test",
+                             audio: "audio test".data(using: .utf8),
+                             origin: "origin test",
+                             definition: "definition test",
+                             urlAudio: "https://api.dictionaryapi.dev/media/pronunciations/en/test.mp3",
+                             synonyms: "synonymOne \n synonymTwo",
+                             antonyms: "antonymOne \n antonymTwo",
+                             examples: "This is an example of a test.")
+        let wordTwo = LocalWord(word: "word two",
+                             phonetic: "phonetic test",
+                             audio: "audio test".data(using: .utf8),
+                             origin: "origin test",
+                             definition: "definition test",
+                             urlAudio: "https://api.dictionaryapi.dev/media/pronunciations/en/test.mp3",
+                             synonyms: "synonymOne \n synonymTwo",
+                             antonyms: "antonymOne \n antonymTwo",
+                             examples: "This is an example of a test.")
+        let wordThree = LocalWord(word: "word three",
+                             phonetic: "phonetic test",
+                             audio: "audio test".data(using: .utf8),
+                             origin: "origin test",
+                             definition: "definition test",
+                             urlAudio: "https://api.dictionaryapi.dev/media/pronunciations/en/test.mp3",
+                             synonyms: "synonymOne \n synonymTwo",
+                             antonyms: "antonymOne \n antonymTwo",
+                             examples: "This is an example of a test.")
+        //Given
+        localDictionaryService.saveWord(wordOne)
+        localDictionaryService.saveWord(wordTwo)
+        localDictionaryService.saveWord(wordThree)
+        localDictionaryService.fetchWords()
+        //When
+        localDictionaryService.clearFavorites()
+        
+        //Then
+        XCTAssertTrue(localDictionaryService.favoriteWords.isEmpty)
+    }
 }
