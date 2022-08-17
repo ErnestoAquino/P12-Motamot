@@ -11,6 +11,8 @@ import AVFoundation
 
 extension WordViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer , successfully flag: Bool) {
+//      When the audio has finished playing.
+//      the image of the playPronunciation button is changed.
         playPronunciationButton.setImage(UIImage(systemName: "play.circle"), for: .normal)
     }
 }
