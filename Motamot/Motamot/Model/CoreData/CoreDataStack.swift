@@ -9,6 +9,11 @@ import Foundation
 import CoreData
 import Mixpanel
 
+/**
+ * CoreDataStack
+ *
+ * This class provides the context for the database.
+ */
 final class CoreDataStack {
     static let shared = CoreDataStack()
     private let persistentContainerName = "Motamot"
