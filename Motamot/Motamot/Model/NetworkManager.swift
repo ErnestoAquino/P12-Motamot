@@ -84,4 +84,3 @@ public final class NetworkManager<T: Decodable> {
         task?.resumeWithRequest()
     }
 }
-
