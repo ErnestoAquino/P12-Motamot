@@ -39,7 +39,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNotNil(error)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenUrlNil_WhenCallGetInformation_ThenCompletionHandlerShouldBeNil() {
@@ -54,7 +54,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(dictionaryResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenNoDataInResponse_WhenCallGetInformation_ThenCompletionHandlerShoultBeNil() {
@@ -70,7 +70,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(dictionaryResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenWrongStatusCode_WhenCallGetInformation_ThenCompletionHandlerShouldBeNil() {
@@ -85,7 +85,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(dictionaryResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenIcorrectDataReceived_WhenCallGetInformation_ThenCompletionHandlerShouldBeNil() {
@@ -99,7 +99,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(dictionaryResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenCorrectResponse_WhenCallGetInformation_ThenShouldHaveCorrectResponse() {
@@ -113,7 +113,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNotNil(dictionaryResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenStringUrlNil_WhenCallGetAudio_ThenDataAudioResponseShouldBeNil() {
@@ -127,7 +127,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(audioResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenAnError_WhenCallGetAudio_ThenAudioDataResponseShouldBeNil() {
@@ -140,7 +140,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(audioResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenStatusCodeErrorInResponse_WhenCallGetAudio_ThenAudioDataResponseShouldBeNil() {
@@ -153,7 +153,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(audioResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenNoDataInResponse_WhenCallGetAudio_ThenAudioDataResponseShouldBeNil() {
@@ -166,7 +166,7 @@ class NetworkManagerTestCase: XCTestCase {
             XCTAssertNil(audioResponse)
             self.expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 0.01)
+        wait(for: [expectation], timeout: 0.1)
     }
 
     func testGivenCorrectResponse_WhenCallGetAudio_ThenDataAudioResponseShouldBeNoNil() {
