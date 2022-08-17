@@ -8,6 +8,11 @@
 import Foundation
 import CoreData
 
+/**
+ * FavoriteWord:
+ *
+ * This class is an object (favorite word) to be managed by CoreData.
+ */
 class FavoriteWord: NSManagedObject {
     
 }
