@@ -20,7 +20,7 @@ class ListSavedWordsViewController: UIViewController {
         super.viewDidLoad()
         localDictionaryService.fetchWords()
         checkIfDisplayMessage()
-        isFavoriteListEmpty()
+        checkIfFavoriteListEmpty()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.reloadData()
@@ -30,13 +30,17 @@ class ListSavedWordsViewController: UIViewController {
         super.viewDidAppear(animated)
         localDictionaryService.fetchWords()
         checkIfDisplayMessage()
-        isFavoriteListEmpty()
+        checkIfFavoriteListEmpty()
         tableView.reloadData()
     }
     @IBAction func clearFavoriteWords(_ sender: UIBarButtonItem) {
         clearFavoriteWords()
     }
     
+    /**
+     This function checks if the user help message should be displayed.
+     If the list is empty it will be displayed.
+     */
     private func checkIfDisplayMessage() {
         if localDictionaryService.favoriteWords.isEmpty {
             noWordsView.isHidden = false
@@ -45,7 +49,12 @@ class ListSavedWordsViewController: UIViewController {
         }
     }
 
-    private func isFavoriteListEmpty() {
+    /**
+     This function checks if there are items in the favorites list.
+     If there are items it displays the button: trash
+     which allows you to delete the entire list.
+     */
+    private func checkIfFavoriteListEmpty() {
         if localDictionaryService.favoriteWords.isEmpty {
             clearFavoritesBarButton.isEnabled = false
             clearFavoritesBarButton.image = nil
@@ -55,10 +64,13 @@ class ListSavedWordsViewController: UIViewController {
         }
     }
 
+    /**
+     This function clears the list of words saved in favorites.
+     */
     private func clearFavoriteWords() {
         localDictionaryService.clearFavorites()
         tableView.reloadData()
         checkIfDisplayMessage()
-        isFavoriteListEmpty()
+        checkIfFavoriteListEmpty()
     }
 }
