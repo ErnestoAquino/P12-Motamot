@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Mixpanel
 
-
+//MARK: -This extension conforms the SearchViewController class with the SearchDelegate protocol.
 extension SearchViewController: SearchDelegate {
 
     /**
@@ -34,7 +34,7 @@ extension SearchViewController: SearchDelegate {
         activityIndicator.isHidden = !value
     }
 
-// Methode for got to new controlller.
+// Methode for got to word view controlller.
     func goToWordViewController() {
         if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "WordViewController") as? WordViewController {
             let word = dictionaryService.myLocalWord
@@ -42,17 +42,12 @@ extension SearchViewController: SearchDelegate {
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
-
-    /**
-     Reloads the row  of the table view.
-     */
-    func reloadTableView() {
-        tableView.reloadData()
-    }
 }
 
+//MARK: - This extension conforms the SearchViewController class with the UITextFieldDelegate protocol.
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //Defines the behavior of the keyboard search key.
         dictionaryService.getDefinition(word: wordTextField.text)
         wordTextField.resignFirstResponder()
         Mixpanel.mainInstance().track(event: "Keyboard for search")
@@ -60,10 +55,12 @@ extension SearchViewController: UITextFieldDelegate {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //Allows hide the keyboard when touching the screen.
         self.wordTextField.resignFirstResponder()
     }
 }
 
+//MARK: - This extension conforms the SearchViewController class with the UITableViewDataSource protocol.
 extension SearchViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -87,6 +84,7 @@ extension SearchViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - This extension conforms the SearchViewController class with the UITableViewDelegate protocol.
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let destinationVC = storyboard?.instantiateViewController(withIdentifier: "WordViewController") as? WordViewController {
@@ -103,7 +101,12 @@ extension SearchViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - Extension  SearchViewController class
 extension SearchViewController {
+    /**
+     This function checks if the user help message should be displayed.
+     If the list is empty it will be displayed.
+     */
     func checkIfDisplayMessage() {
         if dictionaryService.wordsSearched.isEmpty {
             tableView.isHidden = true
