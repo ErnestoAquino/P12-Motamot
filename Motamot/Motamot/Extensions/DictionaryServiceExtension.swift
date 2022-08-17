@@ -8,7 +8,6 @@
 import Foundation
 
 extension DictionaryService: SearchDelegate {
-
     /**
      This function displays an alert to the user.
      
@@ -17,7 +16,6 @@ extension DictionaryService: SearchDelegate {
     func warningMessage(_ message: String) {
         viewDelegate?.warningMessage(message)
     }
-
     /**
      This button shows (or hides) the activity indicator.
      
@@ -26,7 +24,6 @@ extension DictionaryService: SearchDelegate {
     func showActivityIndicator(_ value: Bool) {
         viewDelegate?.showActivityIndicator(value)
     }
-
     /**
      This method navigate to word view control.
      */
