@@ -14,7 +14,7 @@ import CoreData
  * This class is used to manage local words.
  */
 
-final public class LocalDictionaryService {
+public final class LocalDictionaryService {
     private (set) var problemSaving = false
     private (set) var problemFetching = false
     private let mainContext: NSManagedObjectContext
@@ -41,6 +41,9 @@ final public class LocalDictionaryService {
         }
     }
 
+    /**
+     This method deletes all favoriteWords stored in the database.
+     */
     func clearFavorites() {
         for word in favoriteWords {
             deleteWord(word)
@@ -57,7 +60,6 @@ final public class LocalDictionaryService {
     func deleteWord(_ word: FavoriteWord?) {
         guard let wordToDelete = word else { return }
         mainContext.delete(wordToDelete)
-
         saveContext()
         fetchWords()
     }
