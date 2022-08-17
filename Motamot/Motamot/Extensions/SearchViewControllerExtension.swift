@@ -94,6 +94,13 @@ extension SearchViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            dictionaryService.wordsSearched.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
 extension SearchViewController {
