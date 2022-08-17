@@ -26,15 +26,11 @@ extension DictionaryService: SearchDelegate {
     func showActivityIndicator(_ value: Bool) {
         viewDelegate?.showActivityIndicator(value)
     }
-//TODO: Este metodo sera eliminado probablemente.
-    func goToWordViewController() {
-        viewDelegate?.goToWordViewController()
-    }
 
     /**
-     Reloads the row  of the table view.
+     This method navigate to word view control.
      */
-    func reloadTableView() {
-        viewDelegate?.reloadTableView()
+    func goToWordViewController() {
+        viewDelegate?.goToWordViewController()
     }
 }
