@@ -10,7 +10,5 @@ import Foundation
 protocol SearchDelegate: AnyObject {
     func warningMessage(_ message: String)
     func showActivityIndicator(_ value: Bool)
-    //TODO: La funcio go to view controller podria ser inncesaria.
     func goToWordViewController()
-    func reloadTableView()
 }
