@@ -7,6 +7,11 @@
 
 import UIKit
 
+/**
+ * WordTableViewCell:
+ *
+ * The visual representation of a single row in a table view for history search.
+ */
 class WordTableViewCell: UITableViewCell {
     @IBOutlet weak var wordUILabel: UILabel!
  

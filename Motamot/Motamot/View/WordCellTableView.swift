@@ -7,6 +7,11 @@
 
 import UIKit
 
+/**
+ * WordCellTableView:
+ *
+ * The visual representation of a single row in a table view for favorite words.
+ */
 class WordCellTableView: UITableViewCell {
 
     @IBOutlet weak var wordLabel: UILabel!
