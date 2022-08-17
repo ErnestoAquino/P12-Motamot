@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DictionaryService {
+public final class DictionaryService {
     weak var viewDelegate: SearchDelegate?
     private let session: URLSessionProtocol
     var myLocalWord: LocalWord?
@@ -24,7 +24,7 @@ class DictionaryService {
      */
     func getDefinition(word: String?) {
         guard let word = word else {
-            warningMessage("Mot a mot, it is a dictionary.\nPlease enter a word like: Love")
+            warningMessage("Oops, you can try again.")
             return
         }
         let wordWithoutSpaces = trimmingAllSpaces(word)
