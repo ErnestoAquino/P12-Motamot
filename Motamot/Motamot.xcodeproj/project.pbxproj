@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9404417B28AA576200C13890 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 9404417A28AA576200C13890 /* Mixpanel */; };
 		94102251289A6BB100421C0E /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94102250289A6BB100421C0E /* WordViewController.swift */; };
 		942DC10828A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942DC10728A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift */; };
 		94331C1028A9A9EB00D4C4E7 /* DictionaryResponseWithoutElements.json in Resources */ = {isa = PBXBuildFile; fileRef = 94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */; };
@@ -43,6 +42,7 @@
 		94AF96F928A915DE00041C84 /* DictionaryServiceMockDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF96F828A915DE00041C84 /* DictionaryServiceMockDelegate.swift */; };
 		94DA23A328A4ED5500FE062F /* SavedWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA23A228A4ED5500FE062F /* SavedWordViewController.swift */; };
 		94DA23A528A4FCD200FE062F /* SavedWordViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DA23A428A4FCD200FE062F /* SavedWordViewControllerExtension.swift */; };
+		94DD416428AE7604002986F2 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 94DD416328AE7604002986F2 /* Mixpanel */; };
 		94E2159028A64C8700EAAEAD /* DictionaryResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 94E2158F28A64C8700EAAEAD /* DictionaryResponse.json */; };
 		94E2159228A64EF000EAAEAD /* FakeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159128A64EF000EAAEAD /* FakeResponse.swift */; };
 		94E2159428A656CE00EAAEAD /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E2159328A656CE00EAAEAD /* URLSessionFake.swift */; };
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9404417B28AA576200C13890 /* Mixpanel in Frameworks */,
+				94DD416428AE7604002986F2 /* Mixpanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +297,7 @@
 			);
 			name = Motamot;
 			packageProductDependencies = (
-				9404417A28AA576200C13890 /* Mixpanel */,
+				94DD416328AE7604002986F2 /* Mixpanel */,
 			);
 			productName = Motamot;
 			productReference = 94A37CF428900CD600F92D80 /* Motamot.app */;
@@ -350,7 +350,7 @@
 			);
 			mainGroup = 94A37CEB28900CD600F92D80;
 			packageReferences = (
-				9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+				94DD416228AE7604002986F2 /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
 			);
 			productRefGroup = 94A37CF528900CD600F92D80 /* Products */;
 			projectDirPath = "";
@@ -711,7 +711,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+		94DD416228AE7604002986F2 /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
 			requirement = {
@@ -722,9 +722,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9404417A28AA576200C13890 /* Mixpanel */ = {
+		94DD416328AE7604002986F2 /* Mixpanel */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9404417928AA576200C13890 /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			package = 94DD416228AE7604002986F2 /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
 			productName = Mixpanel;
 		};
 /* End XCSwiftPackageProductDependency section */
