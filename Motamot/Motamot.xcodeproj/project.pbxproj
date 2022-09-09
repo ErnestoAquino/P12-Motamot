@@ -64,6 +64,7 @@
 		94102250289A6BB100421C0E /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		942DC10728A7B09A00219CF0 /* LocalDictionaryServiceTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryServiceTestCase.swift; sourceTree = "<group>"; };
 		94331C0F28A9A9EA00D4C4E7 /* DictionaryResponseWithoutElements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DictionaryResponseWithoutElements.json; sourceTree = "<group>"; };
+		943C9CFF28CB46200054749D /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		9474241828A39F6A0056709B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9474241A28A3A7B90056709B /* FavoriteWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteWord.swift; sourceTree = "<group>"; };
 		9474241C28A3AB3C0056709B /* LocalDictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDictionaryService.swift; sourceTree = "<group>"; };
@@ -126,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943C9CFE28CB46200054749D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				943C9CFF28CB46200054749D /* AppTrackingTransparency.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9474241728A39F4F0056709B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +152,7 @@
 				94A37CF628900CD600F92D80 /* Motamot */,
 				94A37D1028900CD800F92D80 /* MotamotTests */,
 				94A37CF528900CD600F92D80 /* Products */,
+				943C9CFE28CB46200054749D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
