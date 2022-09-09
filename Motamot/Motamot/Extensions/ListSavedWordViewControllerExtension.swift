@@ -38,3 +38,23 @@ extension ListSavedWordsViewController: UITableViewDelegate {
     }
 }
 
+extension ListSavedWordsViewController {
+    /**
+     This function requests confirmation from the user to delete the stored words. If the user confirms then they are deleted..
+     */
+    func requestConfirmationForRemoveWordsSaved() {
+        let messageAlert = "This action will delete all saved words.\n Do you want continue?"
+        let alert = UIAlertController.init(title: "Hi!", message: messageAlert, preferredStyle: .alert)
+        let actionOK = UIAlertAction(title: "OK", style: .destructive) { _ in
+            self.localDictionaryService.clearFavorites()
+            self.tableView.reloadData()
+            self.checkIfDisplayMessage()
+            self.checkIfFavoriteListEmpty()
+        }
+        let actionCancel = UIAlertAction.init(title: "Cancel", style: .cancel)
+        alert.addAction(actionOK)
+        alert.addAction(actionCancel)
+        present(alert, animated: true)
+    }
+}
+
